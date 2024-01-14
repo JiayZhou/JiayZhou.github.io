@@ -1,4 +1,14 @@
 main:
+  - title: "Rigel: Transforming Tabular Data by Declarative Mapping"
+    authors: Ran Chen, Di Weng, Yanwei Huang, Xinhuan Shu, <strong>Jiayi Zhou</strong>, Guodao Sun, Yingcai Wu*
+    conference_short: IEEE VIS 2022
+    conference: IEEE Visualization Conference <strong>(VIS)</strong>, 2022.
+    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529
+    # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    notes: Data Transformation
+    image: ./assets/img/rigel.jpg
 
   - title: "Shoes++: A Smart Detachable Sole for Social Foot-to-foot Interaction"
     authors: Zihan Yan, <strong>Jiayi Zhou</strong>, Yufei Wu, Guanhong Liu, Danli Luo, Zihong Zhou, Haipeng Mi, Lingyun Sun, Xiang ’Anthony’ Chen, Ye Tao, Yang Zhang, Guanyun Wang* (*Corresponding authors)
@@ -10,13 +20,13 @@ main:
     image: ./assets/img/shoes.png
     notes: Interactive Techniques
 
-  - title: "Rigel: Transforming Tabular Data by Declarative Mapping"
-    authors: Ran Chen, Di Weng, Yanwei Huang, Xinhuan Shu, <strong>Jiayi Zhou</strong>, Guodao Sun, Yingcai Wu*
-    conference_short: IEEE VIS 2022
-    conference: IEEE Visualization Conference <strong>(VIS)</strong>, 2022.
-    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529
+  - title: "Understanding Nonlinear Collaboration between Human and AI Agents: A Co-design Framework for Creative Design"
+    authors: <strong>Jiayi Zhou</strong>, anonymous authors.
+    conference_short: CHI 2024
+    conference: The ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2024.
+    # pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Data Transformation
-    image: ./assets/img/rigel.jpg
+    notes: re-submission being reviewed
+    image: ./assets/img/optimuse.jpg
