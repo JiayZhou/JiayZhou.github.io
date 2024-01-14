@@ -1,4 +1,15 @@
 main:
+  - title: "Understanding Nonlinear Collaboration between Human and AI Agents: A Co-design Framework for Creative Design"
+    authors: <strong>Jiayi Zhou</strong>, anonymous authors.
+    conference_short: CHI 2024
+    conference: The ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2024.
+    # pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529
+    # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    notes: re-submission being reviewed
+    image: ./assets/img/optimuse.png
+
   - title: "Rigel: Transforming Tabular Data by Declarative Mapping"
     authors: Ran Chen, Di Weng, Yanwei Huang, Xinhuan Shu, <strong>Jiayi Zhou</strong>, Guodao Sun, Yingcai Wu*
     conference_short: IEEE VIS 2022
@@ -19,14 +30,3 @@ main:
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/shoes.png
     notes: Interactive Techniques
-
-  - title: "Understanding Nonlinear Collaboration between Human and AI Agents: A Co-design Framework for Creative Design"
-    authors: <strong>Jiayi Zhou</strong>, anonymous authors.
-    conference_short: CHI 2024
-    conference: The ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2024.
-    # pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529
-    # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: re-submission being reviewed
-    image: ./assets/img/optimuse.png
