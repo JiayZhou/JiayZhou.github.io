@@ -3,7 +3,7 @@ main:
     authors: <strong>Jiayi Zhou</strong>, anonymous authors.
     conference_short: CHI 2024
     conference: The ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2024.
-    # pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529
+    pdf: https://arxiv.org/abs/2401.07312
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
