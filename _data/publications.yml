@@ -1,6 +1,6 @@
 main:
   - title: "Understanding Nonlinear Collaboration between Human and AI Agents: A Co-design Framework for Creative Design"
-    authors: <strong>Jiayi Zhou</strong>, anonymous authors.
+    authors: <strong>Jiayi Zhou</strong>, Renzhong Li, Junxiu Tang, Tan Tang, Haotian Li, Weiwei Cui, Yingcai Wu.
     conference_short: CHI 2024
     conference: The ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2024.
     pdf: https://arxiv.org/abs/2401.07312
@@ -9,6 +9,16 @@ main:
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     notes: Human-AI Co-creativity
     image: ./assets/img/optimuse.png
+
+  - title: "Shoes++: A Smart Detachable Sole for Social Foot-to-foot Interaction"
+    authors: Zihan Yan, <strong>Jiayi Zhou</strong>, Yufei Wu, Guanhong Liu, Danli Luo, Zihong Zhou, Haipeng Mi, Lingyun Sun, Xiang ’Anthony’ Chen, Ye Tao, Yang Zhang, Guanyun Wang* (*Corresponding authors)
+    conference_short: IMWUT 2022
+    conference: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies <strong>(IMWUT)</strong>, 2022.
+    pdf: https://dl.acm.org/doi/pdf/10.1145/3534620
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/shoes.png
+    notes: Interactive Techniques
 
   - title: "Rigel: Transforming Tabular Data by Declarative Mapping"
     authors: Ran Chen, Di Weng, Yanwei Huang, Xinhuan Shu, <strong>Jiayi Zhou</strong>, Guodao Sun, Yingcai Wu*
@@ -20,13 +30,3 @@ main:
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     notes: Data Transformation
     image: ./assets/img/rigel.jpg
-
-  - title: "Shoes++: A Smart Detachable Sole for Social Foot-to-foot Interaction"
-    authors: Zihan Yan, <strong>Jiayi Zhou</strong>, Yufei Wu, Guanhong Liu, Danli Luo, Zihong Zhou, Haipeng Mi, Lingyun Sun, Xiang ’Anthony’ Chen, Ye Tao, Yang Zhang, Guanyun Wang* (*Corresponding authors)
-    conference_short: IMWUT 2022
-    conference: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies <strong>(IMWUT)</strong>, 2022.
-    pdf: https://dl.acm.org/doi/pdf/10.1145/3534620
-    # code: https://github.com/MrGiovanni/ContinualLearning
-    # bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/shoes.png
-    notes: Interactive Techniques
