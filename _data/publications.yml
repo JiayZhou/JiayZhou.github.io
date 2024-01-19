@@ -7,7 +7,7 @@ main:
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: re-submission being reviewed
+    notes: Human-AI Co-creativity
     image: ./assets/img/optimuse.png
 
   - title: "Rigel: Transforming Tabular Data by Declarative Mapping"
