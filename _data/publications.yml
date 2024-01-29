@@ -19,7 +19,7 @@ main:
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     notes: Fixed-order Event Sequence Visualization
-    image: ./assets/img/stringline.pdf
+    image: ./assets/img/stringline.png
 
   - title: "Shoes++: A Smart Detachable Sole for Social Foot-to-foot Interaction"
     authors: Zihan Yan, <strong>Jiayi Zhou</strong>, Yufei Wu, Guanhong Liu, Danli Luo, Zihong Zhou, Haipeng Mi, Lingyun Sun, Xiang ’Anthony’ Chen, Ye Tao, Yang Zhang, Guanyun Wang* (*Corresponding authors)
