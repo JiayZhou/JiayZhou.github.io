@@ -1,6 +1,6 @@
 main:
   - title: "Understanding Nonlinear Collaboration between Human and AI Agents: A Co-design Framework for Creative Design"
-    authors: <strong>Jiayi Zhou</strong>, Renzhong Li, Junxiu Tang, Tan Tang, Haotian Li, Weiwei Cui, Yingcai Wu.
+    authors: <strong>Jiayi Zhou</strong>, Renzhong Li, Junxiu Tang, Tan Tang*, Haotian Li, Weiwei Cui, Yingcai Wu*.
     conference_short: CHI 2024
     conference: The ACM Conference on Human Factors in Computing Systems <strong>(CHI)</strong>, 2024.
     pdf: https://arxiv.org/abs/2401.07312
@@ -11,7 +11,7 @@ main:
     image: ./assets/img/optimuse.png
 
   - title: "A Comparative Study on Fixed-order Event Sequence Visualizations: Gantt, Extended Gantt, and Stringline Charts"
-    authors: Junxiu Tang, Fumeng Yang, Jiang Wu, Yifang Wang, <strong>Jiayi Zhou</strong>, Xiwen Cai, Lingyun Yu, Yingcai Wu.
+    authors: Junxiu Tang, Fumeng Yang, Jiang Wu, Yifang Wang, <strong>Jiayi Zhou</strong>, Xiwen Cai, Lingyun Yu, Yingcai Wu*.
     conference_short: IEEE TVCG
     conference: IEEE Transactions on Visualization and Computer Graphics <strong>(IEEE TVCG)</strong>, 2024.
     # pdf: https://arxiv.org/abs/2401.07312
