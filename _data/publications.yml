@@ -5,7 +5,7 @@ main:
     conference: SIGGRAPH 2024, Art Gallery.
     pdf: https://dl.acm.org/doi/pdf/10.1145/3641523.3669939
     notes: Exhibition
-    image: ./assets/img/sonnet.png
+    image: ./assets/img/sonnet.jpg
     
   - title: "Understanding Nonlinear Collaboration between Human and AI Agents: A Co-design Framework for Creative Design"
     authors: <strong>Jiayi Zhou</strong>, Renzhong Li, Junxiu Tang, Tan Tang*, Haotian Li, Weiwei Cui, Yingcai Wu*(*Corresponding authors)
