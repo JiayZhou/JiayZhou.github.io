@@ -3,7 +3,7 @@ layout: homepage
 ---
 
 ## About Me
-Jiayi Zhou is currently a 1-year Ph.D. Student at Hong Kong University of Science and Technology, under the supervision of [Prof. Huamin Qu](http://huamin.org/) in [VisLab](http://vis.cse.ust.hk/). Before that, she received her her bachelor's degree in Industrial Design from the College of Computer Science and Technology at Zhejiang University, China, in 2024。
+Jiayi Zhou is currently a 1-year Ph.D. Student at Hong Kong University of Science and Technology, under the supervision of [Prof. Huamin Qu](http://huamin.org/) in [VisLab](http://vis.cse.ust.hk/). Before that, she received her her bachelor's degree in Industrial Design from the College of Computer Science and Technology at Zhejiang University.
 
 Her research interests lie at the intersection of Data Visualization, Human-Computer Interaction (HCI), and Human-AI Collaboration. She also cteates data-driven art and narrative visualizations in her spare time.
 
