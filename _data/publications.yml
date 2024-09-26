@@ -22,7 +22,7 @@ main:
     authors: Junxiu Tang, Fumeng Yang, Jiang Wu, Yifang Wang, <strong>Jiayi Zhou</strong>, Xiwen Cai, Lingyun Yu, Yingcai Wu*
     conference_short: IEEE TVCG
     conference: IEEE Transactions on Visualization and Computer Graphics <strong>(IEEE TVCG)</strong>, 2024.
-    # pdf: https://arxiv.org/abs/2401.07312
+    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10415212
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
