@@ -5,7 +5,4 @@
   - **[Oct. 2021 - Mar. 2022]** [Guanyun Lab](https://design.zju.edu.cn/guanyunlab/), Zhejiang University, advised by [Prof. Guanyun Wang](https://www.guanyundesign.com/)
 
 <h4 style="margin:0 10px 0;">Conference Reviewers</h4>
-
-<ul style="margin:0 0 5px;">
-  <li><a href="https://dl.acm.org/conference/chi"><autocolor>The ACM Conference on Human Factors in Computing Systems (CHI) 2024</autocolor></a></li>
-</ul>
+  - **[2024, 2025]** <a href="https://dl.acm.org/conference/chi"><autocolor>The ACM Conference on Human Factors in Computing Systems (CHI)</autocolor></a>
