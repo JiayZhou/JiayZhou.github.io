@@ -6,3 +6,4 @@
 
 <h4 style="margin:0 10px 0;">Conference Reviewers</h4>
   - **[2024, 2025]** <a href="https://dl.acm.org/conference/chi"><autocolor>The ACM Conference on Human Factors in Computing Systems (CHI)</autocolor></a>
+  - **[2025]** <a href="[https://dl.acm.org/conference/chi](https://cvpr.thecvf.com/)"><autocolor>The IEEE/CVF Conference on Computer Vision and Pattern Recognition</autocolor></a>
