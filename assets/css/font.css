@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+    --mid-gray: #999;
+    --link-highlight: #134857;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --mid-gray: #666;
+        --link-highlight: #93d5dc;
+    }
+}
 
 body {
   background-color: #fff;
   padding:0px;
-  font: 16.0px/1.5 Crimson Pro, serif; 
+  font: 16.0px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif; 
   color:#595959;
   font-weight:400;
   margin:0
