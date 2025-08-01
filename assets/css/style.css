@@ -167,6 +167,35 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
 
 footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-smoothing: subpixel-antialiased; text-align: center; }
 
+/* Custom footer styles for the new footer */
+footer[style*="background-color"] {
+    position: static !important;
+    width: 100% !important;
+    float: none !important;
+    background-color: #fffef9 !important;
+    clear: both !important;
+    margin: 0 !important;
+    padding: 20px 0 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+footer[style*="background-color"] email {
+    color: #595959;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    footer[style*="background-color"] {
+        background-color: #20212b !important;
+    }
+    
+    footer[style*="background-color"] email {
+        color: #fffef9;
+    }
+}
+
 @media print, screen and (max-width: 960px) { .pub-row { display: flex; align-items: center; }
   div.wrapper { width: auto; margin: 0; }
   header, section, footer { float: none; position: static; width: auto; }
