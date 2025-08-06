@@ -165,7 +165,7 @@ small { font-size: 11px; }
 
 hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
 
-footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-smoothing: subpixel-antialiased; text-align: center; }
+/* footer { width: 232px; float: left; position: fixed; bottom: 30px; -webkit-font-smoothing: subpixel-antialiased; text-align: center; } */
 
 /* Custom footer styles for the new footer */
 footer[style*="background-color"] {
