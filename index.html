@@ -188,6 +188,53 @@
                 font-size: 0.8rem;
             }
         }
+
+        /* Cat hover effect styles */
+        .cat-hover {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cat-hover::after {
+            content: '';
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            width: 80px;
+            height: 80px;
+            background-image: url('./assets/img/dou_compressed.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            border-radius: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .cat-hover:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Mobile responsiveness for cat image */
+        @media (max-width: 768px) {
+            .cat-hover::after {
+                width: 80px;
+                height: 80px;
+                transform: translateX(-50%) translateY(10px);
+            }
+            
+            .cat-hover:hover::after {
+                transform: translateX(-50%) translateY(0);
+            }
+        }
         </style>
 
     </head>
@@ -295,7 +342,8 @@
                     Intelligence, including GenAI and computer vision models,
                     can empower the visual storytelling process.</p>
                 <p>In daily life, Jiayi seeks <strong>moments of
-                        "connection"</strong> with nature, her beloved cat, her
+                        "connection"</strong> with nature, her <span
+                        class="cat-hover">beloved cat</span>, her
                     body, and like-minded individuals. She aspires to be a
                     dedicated rower, an imaginative designer, and a perceptive
                     photographer.</p>
@@ -315,7 +363,8 @@
                             href="https://ieeexplore.ieee.org/document/10415212">paper</a>
                         about Fixed-order event sequence visualization has been
                         accepted to <a
-                            href="https://www.computer.org/csdl/journal/tg">TVCG 2024</a>.</li>
+                            href="https://www.computer.org/csdl/journal/tg">TVCG
+                            2024</a>.</li>
                     <li>[Jul. 2023] Attending the <a
                             href="https://chinavis.org/2023/english/index_en.html">ChinaVis
                             2023 conference</a> in Chongqing, China!</li>
@@ -327,7 +376,8 @@
                     <li>[Jul. 2022] Our <a
                             href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">paper</a>
                         about data transformation has been accepted to <a
-                            href="https://ieeevis.org/year/2022/welcome">VIS 2022</a>.</li>
+                            href="https://ieeevis.org/year/2022/welcome">VIS
+                            2022</a>.</li>
                 </ul>
                 <br>
 
@@ -540,17 +590,15 @@
                 </div>
 
                 <h2 class="section-head" id="blogs">Blog</h2>
-                <p>Coming soon! I'll be sharing thoughts on academic life,
-                    research adventures, and little moments that spark joy along
-                    the way.</p>
-
+                <p>Coming soon! I’ll be sharing reflections on research, rowing,
+                    reading, and the small moments that spark joy.</p>
                 <ul>
                     <li><a href="#">Paper Submission Reflection: Behind the
                             Scenes</a></li>
-                    <li><a href="#">Surviving the Academic Storm</a></li>
                     <li><a href="#">What I Talk about When I Talk about
                             Rowing</a></li>
                     <li><a href="#">Jiayi's Bookshelf</a></li>
+                    <li><a href="#">Collecting the Dots</a></li>
                 </ul>
 
                 <h2 class="section-head" id="services">Service</h2>
@@ -591,7 +639,8 @@
         <footer
             style="background-color: #fffef9; width: 100%; text-align: center; padding: 20px 0; margin-top: 2em">
             <div id="clustrmaps-container">
-                <script type='text/javascript' id='clustrmaps' src='https://cdn.clustrmaps.com/map_v2.js?cl=d8e3e7&w=300&t=m&d=6s6ALrN9wadyBkIfgVHlqR521LjGJLHZdDOGeQDmeYM&co=20212b&cmn=3eb7f0&cmo=93d5dc&ct=fffef9'></script>
+                <script type='text/javascript' id='clustrmaps'
+                    src='https://cdn.clustrmaps.com/map_v2.js?cl=d8e3e7&w=300&t=m&d=6s6ALrN9wadyBkIfgVHlqR521LjGJLHZdDOGeQDmeYM&co=20212b&cmn=3eb7f0&cmo=93d5dc&ct=fffef9'></script>
             </div>
         </footer>
         <script src="./assets/js/scale.fix.js"></script>
