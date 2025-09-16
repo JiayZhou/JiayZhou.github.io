@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>What do I talk about when I talk about rowing? | Jiayi
+            Zhou</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description"
+            content="Reflections on rowing, rhythm, and finding flow in both sport and research">
+        <meta name="keywords"
+            content="blog, rowing, sport, research, life, jiayi zhou">
+
+        <link rel="icon" media="(prefers-color-scheme:dark)"
+            href="./assets/img/jiayi.svg" type="image/svg+xml" />
+        <link rel="icon" media="(prefers-color-scheme:light)"
+            href="./assets/img/jiayi.svg" type="image/svg+xml" />
+        <script src="./assets/js/favicon-switcher.js"
+            type="application/javascript"></script>
+
+        <link rel=stylesheet
+            href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
+            integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw="
+            crossorigin=anonymous>
+        <link rel=stylesheet
+            href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
+            integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+            crossorigin=anonymous>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="./assets/css/font.css">
+        <link rel="stylesheet" href="./assets/css/style.css"
+            id="main-stylesheet">
+        <link rel="preload" href="./assets/css/style.css" as="style"
+            id="dark-css">
+        <link rel="preload" href="./assets/css/style-no-dark-mode.css"
+            as="style" id="light-css">
+
+        <style>
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: transparent;
+            border: none;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #134857;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        body[data-theme="dark"] .theme-toggle {
+            color: #3eb7f0 !important;
+        }
+
+        .sun-and-moon > :is(.moon, .sun, .sun-beams) {
+            transform-origin: center;
+        }
+
+        .sun-and-moon > :is(.moon, .sun) {
+            fill: currentColor;
+        }
+
+        .theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
+            fill: currentColor;
+        }
+
+        .sun-and-moon > .sun-beams {
+            stroke: currentColor;
+            stroke-width: 2px;
+        }
+
+        .theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
+            stroke: currentColor;
+        }
+
+        [data-theme="dark"] .sun-and-moon > .sun {
+            transform: scale(1.75);
+        }
+
+        [data-theme="dark"] .sun-and-moon > .sun-beams {
+            opacity: 0;
+        }
+
+        [data-theme="dark"] .sun-and-moon > .moon > circle {
+            transform: translateX(-7px);
+        }
+
+        @supports (cx: 1) {
+            [data-theme="dark"] .sun-and-moon > .moon > circle {
+                cx: 17;
+                transform: translateX(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .sun-and-moon > .sun {
+                transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            .sun-and-moon > .sun-beams {
+                transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity .5s ease;
+            }
+
+            .sun-and-moon .moon > circle {
+                transition: transform .25s ease-out;
+            }
+
+            @supports (cx: 1) {
+                .sun-and-moon .moon > circle {
+                    transition: cx .25s ease-out;
+                }
+            }
+
+            [data-theme="dark"] .sun-and-moon > .sun {
+                transition-timing-function: ease;
+                transition-duration: .25s;
+                transform: scale(1.75);
+            }
+
+            [data-theme="dark"] .sun-and-moon > .sun-beams {
+                transition-duration: .15s;
+                transform: rotateZ(-25deg);
+            }
+
+            [data-theme="dark"] .sun-and-moon > .moon > circle {
+                transition-duration: .5s;
+                transition-delay: .25s;
+            }
+        }
+
+        .theme-switching {
+            pointer-events: none;
+        }
+
+        @media (max-width: 960px) {
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        </style>
+
+    </head>
+    <body>
+        <button class="theme-toggle" id="themeToggle" title="mode switch"
+            aria-label="auto" aria-live="polite">
+            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24"
+                viewBox="0 0 24 24">
+                <mask class="moon" id="moon-mask">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)"
+                    fill="currentColor" />
+                <g class="sun-beams" stroke="currentColor">
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+            </svg>
+        </button>
+
+        <div class="blog-container">
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+
+            <header class="blog-header">
+                <h1 class="blog-title">What do I talk about when I talk about
+                    rowing?</h1>
+
+                <div class="blog-poem">
+                    <p><strong>《行香子·过七里濑》</strong></p>
+                    <p>苏轼</p>
+                    <br>
+                    <p>一叶舟轻，双桨鸿惊。水天清、影湛波平。鱼翻藻鉴，鹭点烟汀。过沙溪急，霜溪冷，月溪明。</p>
+                    <p>重重似画，曲曲如屏。算当年、虚老严陵。君臣一梦，今古空名。但远山长，云山乱，晓山青。</p>
+                </div>
+            </header>
+
+            <article class="blog-content">
+                <h2>Why did I start rowing?</h2>
+                <div class="blog-meta">
+                    <div class="blog-date">
+                        <i class="far fa-calendar"></i>
+                        Aug 25, 2025
+                    </div>
+                </div>
+                <div class="blog-hero-image">
+                    <img src="./assets/img/2025unichamp_blog.jpg"
+                        alt="2025 Hong Kong Universities Rowing Championships">
+                    <div class="blog-image-caption">
+                        2025 Hong Kong Universities Rowing Championships
+                        (I am third from the left in the second row).
+                    </div>
+                </div>
+                <p>It's the first day of summer without any rowing plan ahead
+                    and time to write down a reflection about my personal
+                    reasons behind rowing. To be honest, I chose rowing
+                    following the bias of my heart and not giving up in
+                    responsibility for the team. Still, there are some
+                    rationales to summarize.</p>
+
+                <p>I row not for a medal, but for better learning and working
+                    status. Committing to a sport requires physical, financial,
+                    and time investment. Therefore, I was looking for a sport
+                    with the following qualities to boost cost-efficiency:</p>
+
+                <ul>
+                    <li><strong>Safety as a Basic Consideration:</strong>
+                        Engaging in a sport that minimizes the risk of
+                        injury.</li>
+                    <li><strong>Long-term Challenge:</strong> It allows me to
+                        continuously challenge myself and develop my skills over
+                        the years.</li>
+                    <li><strong>Morning Training:</strong> Training early in the
+                        morning helps me establish a daily routine; waking up
+                        early is part of the training discipline.</li>
+                    <li><strong>Cultural Background:</strong> It offers a wealth
+                        of history and literature to explore, fostering
+                        spiritual growth and personal enrichment.</li>
+                    <li><strong>Social Connection:</strong> It's a social sport
+                        that helps me connect with local people and the
+                        community.</li>
+                    <li><strong>Targeting Weaknesses:</strong> Participation
+                        highlights my weakest link. Physical fitness involves
+                        six attributes: agility, coordination, balance, speed,
+                        reaction, and explosiveness. I need to work on improving
+                        my agility, which is currently my biggest
+                        challenge.</li>
+                </ul>
+
+                <p>After exploring the available resources in Hong Kong, I
+                    narrowed down to rowing, windsurfing, and fencing. I crossed
+                    out "marathon" because I once ran a half marathon, which led
+                    to a knee injury. I stopped running for several months and
+                    still have lingering concerns about it. Tennis (it hurts
+                    when you get hit), rock climbing (easy to fall), and cycling
+                    (risk of falling at high speeds) were also excluded due to
+                    my fear of getting injured.</p>
+
+                <h3>Whom I row with matters</h3>
+
+                <p>I started collecting information about people in those sports
+                    clubs and courses. It is true that different athletes in
+                    various sports have distinct characteristics. Unfortunately,
+                    there wasn't much information about windsurfing and fencing
+                    except for official introductions and professional photos.
+                    The comparison became unfair at this stage.</p>
+
+                <p>From the photos in HKUST rowing club's Instagram, I saw their
+                    dark skin, warm and confident smiles, friendly interactions,
+                    and slightly awkward promotions. Although many of the images
+                    are rough from a promotional perspective, they highlight
+                    sincerity and vitality even more. I was immediately
+                    attracted to the rowing club for its simplicity,
+                    friendliness, and strong emphasis on team spirit and
+                    personal growth. (Hopefully I was not just fascinated by how
+                    cool the rowing girls are.)</p>
+
+                <p>That's the start of my story with rowing.</p>
+            </article>
+        </div>
+
+        <!-- Theme toggle functionality -->
+        <script>
+        // Theme manager (simplified version for blog pages)
+        class ThemeManager {
+            constructor() {
+                this.themeToggle = document.getElementById('themeToggle');
+                this.body = document.body;
+                
+                // Preloaded stylesheets
+                this.darkCSS = null;
+                this.lightCSS = null;
+                
+                // Always use system preference, don't remember user choice
+                this.currentTheme = this.getSystemTheme();
+                this.isManualOverride = false;
+                
+                this.init();
+            }
+            
+            async init() {
+                // Preload CSS files
+                await this.preloadCSS();
+                
+                // Apply current theme
+                this.applyTheme(this.currentTheme);
+                
+                // Page loaded, show content
+                this.body.classList.add('loaded');
+                
+                // Add click event listener
+                this.themeToggle.addEventListener('click', () => this.toggleTheme());
+                
+                // Listen for system theme changes
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                    if (!this.isManualOverride) {
+                        this.currentTheme = e.matches ? 'dark' : 'light';
+                        this.applyTheme(this.currentTheme);
+                    }
+                });
+                
+                // Keyboard shortcut support (Ctrl + D)
+                document.addEventListener('keydown', (e) => {
+                    if (e.ctrlKey && e.key === 'd') {
+                        e.preventDefault();
+                        this.toggleTheme();
+                    }
+                });
+            }
+            
+            async preloadCSS() {
+                // Create preloaded stylesheet elements
+                this.darkCSS = document.createElement('link');
+                this.darkCSS.rel = 'stylesheet';
+                this.darkCSS.href = './assets/css/style.css';
+                this.darkCSS.media = 'print'; // Set to print first, won't apply styles
+                
+                this.lightCSS = document.createElement('link');
+                this.lightCSS.rel = 'stylesheet';
+                this.lightCSS.href = './assets/css/style-no-dark-mode.css';
+                this.lightCSS.media = 'print'; // Set to print first, won't apply styles
+                
+                // Add to head and wait for loading to complete
+                document.head.appendChild(this.darkCSS);
+                document.head.appendChild(this.lightCSS);
+                
+                return Promise.all([
+                    new Promise(resolve => {
+                        this.darkCSS.onload = resolve;
+                        this.darkCSS.onerror = resolve;
+                    }),
+                    new Promise(resolve => {
+                        this.lightCSS.onload = resolve;
+                        this.lightCSS.onerror = resolve;
+                    })
+                ]);
+            }
+            
+            getSystemTheme() {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            
+            applyTheme(theme) {
+                // Add switching state
+                this.body.classList.add('theme-switching');
+                
+                // Use preloaded CSS for seamless switching
+                if (theme === 'dark') {
+                    this.lightCSS.media = 'print';
+                    this.darkCSS.media = 'all';
+                    this.body.setAttribute('data-theme', 'dark');
+                } else {
+                    this.darkCSS.media = 'print';
+                    this.lightCSS.media = 'all';
+                    this.body.setAttribute('data-theme', 'light');
+                }
+                
+                this.updateTooltip(theme);
+                this.updateFavicon(theme);
+                this.updateAriaLabel(theme);
+                
+                // Remove switching state
+                setTimeout(() => {
+                    this.body.classList.remove('theme-switching');
+                }, 100);
+            }
+            
+            updateTooltip(theme) {
+                if (theme === 'dark') {
+                    this.themeToggle.setAttribute('title', 'Switch to light mode');
+                } else {
+                    this.themeToggle.setAttribute('title', 'Switch to dark mode');
+                }
+            }
+
+            updateAriaLabel(theme) {
+                this.themeToggle.setAttribute('aria-label', theme);
+            }
+            
+            updateFavicon(theme) {
+                const favicon = document.querySelector('link[rel="icon"]');
+                if (favicon) {
+                    // Use the same jiayi.svg for both themes
+                    favicon.href = './assets/img/jiayi.svg';
+                }
+            }
+            
+            toggleTheme() {
+                this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+                this.isManualOverride = true;
+                this.applyTheme(this.currentTheme);
+                
+                // Add switching animation effect
+                this.addSwitchAnimation();
+            }
+            
+            addSwitchAnimation() {
+                this.themeToggle.style.transform = 'rotate(360deg)';
+                
+                setTimeout(() => {
+                    this.themeToggle.style.transform = '';
+                }, 300);
+            }
+        }
+        
+        // Initialize theme manager after page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new ThemeManager();
+        });
+        
+        // If DOMContentLoaded has already fired, initialize immediately
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                new ThemeManager();
+            });
+        } else {
+            new ThemeManager();
+        }
+        </script>
+    </body>
+</html>
