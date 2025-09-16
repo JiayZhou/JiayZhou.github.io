@@ -223,6 +223,24 @@ footer[style*="background-color"] email {
   #head1o2 { visibility: hidden; }
   #head2o2 { visibility: hidden; } }
 @media print { body { padding: 0.4in; font-size: 12pt; color: #444; } }
+
+/* Responsive layout for screens between 961px and 1080px */
+@media screen and (max-width: 1080px) and (min-width: 961px) {
+  .wrapper { 
+    width: 95%; 
+    max-width: 1060px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  section { 
+    width: calc(100% - 272px) !important; /* Force override - wrapper minus header (232px) + gaps (40px) */
+    max-width: 750px;
+    float: right;
+  }
+}
+
 .biblink { text-decoration: none; display: inline; margin-right: 0px; }
 
 .fakelink { text-decoration: none; cursor: pointer; }
