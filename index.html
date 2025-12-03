@@ -265,9 +265,14 @@
         <div class="wrapper">
             <header>
 
+                <p id="avatar-message"
+                    style="margin-bottom: -8px; font-size: 0.8rem; text-align: center; transition: all 0.3s ease;">
+                    Can you spot the cat on my page?
+                </p>
+
                 <a class="image avatar"><img
-                        src="./assets/img/avatar_compressed.jpg"
-                        alt="avatar" /></a>
+                        src="./assets/img/speak_540w.jpg"
+                        alt="avatar" id="avatar-img" /></a>
 
                 <h1
                     style="font-family: 'Tangerine', cursive, serif; font-size: 2.15rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
@@ -295,333 +300,381 @@
                         <i class="ai ai-cv" style="font-size:1.3rem;"></i>
                     </a>
 
-                    <a style="margin: 0 5px 0 0"
+                    <!-- <a style="margin: 0 5px 0 0"
                         href="https://github.com/JiayZhou">
                         <i class="fab fa-github"></i>
+                    </a> -->
+
+                    <a style="margin: 0 5px 0 0"
+                        href="https://www.instagram.com/jiayizhouzoe/">
+                        <i class="fab fa-instagram"></i>
                     </a>
 
-                    <a style="margin: 0 0 0 0"
+                    <a style="margin: 0 5px 0 0"
+                        href="https://www.linkedin.com/in/jiayi-zhou-698177283/">
+                        <i class="fab fa-linkedin"></i>
+
+                        <!-- <a style="margin: 0 0 0 0"
                         href="https://twitter.com/DouziZhou">
                         <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-                <br>
-
-                <nav class="section-nav">
-                    <a href="#about-me">ABOUT</a>
-                    <a href="#news">ANNOUNCEMENT</a>
-                    <a href="#publications">PUBLICATION</a>
-                    <a href="#blogs">BLOG</a>
-                    <a href="#services">SERVICE</a>
-                </nav>
-                <br>
-
-            </header>
-            <section>
-
-                <h2 class="section-head" id="about-me">About</h2>
-                <p>Jiayi Zhou is a Ph.D. Student at <a
-                        href="https://hkust.edu.hk/zh-hant">The Hong Kong
-                        University
-                        of Science and Technology</a>, under the supervision of
-                    <a href="http://huamin.org/">Prof. Huamin Qu</a> in the <a
-                        href="http://vis.cse.ust.hk/">VisLab</a>. Before that,
-                    she received her Bachelor of Engineering (B.Eng) degree in
-                    industrial design, graduating with honors as an Outstanding
-                    Graduate from
-                    <a
-                        href="https://www.zju.edu.cn/english/">Zhejiang
-                        University</a> in 2024.</p>
-
-                <p>Her research interests lie at the intersection of
-                    <strong>Data Visualization</strong> and
-                    <strong>Human-Computer Interaction</strong>. She is curious
-                    about how creators <strong>"connect the dots"</strong> in
-                    storytelling amidst the explosion of information. She
-                    investigates how advanced Artificial
-                    Intelligence, including GenAI and computer vision models,
-                    can empower the visual storytelling process.</p>
-                <p>In daily life, Jiayi seeks <strong>moments of
-                        "connection"</strong> with nature, her <span
-                        class="cat-hover">beloved cat</span>, her
-                    body, and like-minded individuals. She aspires to be a
-                    dedicated rower, an imaginative designer, and a perceptive
-                    photographer.</p>
-
-                <br>
-
-                <div
-                    style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px 1rem;">
-                    <h2 class="section-head" id="news"
-                        style="margin: 0;">Announcement</h2>
-                    <div class="publication-filter">
-                        <div class="tag" id="toggle-announcements"
-                            onclick="toggleAnnouncements()"
-                            style="cursor: pointer; margin-left: 8px;">Show
-                            More</div>
+                    </a> -->
                     </div>
-                </div>
-                <ul>
-                    <li>[Sep. 2025] Excited to attend <a
-                            href="https://uist.acm.org/2025/">UIST 2025</a> in
-                        Busan, South Korea in late September!</li>
-                    <li>[Sep. 2025] Check my new posts about a
+                    <br>
+
+                    <nav class="section-nav">
+                        <a href="#about-me">ABOUT</a>
+                        <a href="#news">ANNOUNCEMENT</a>
+                        <a href="#publications">PUBLICATION</a>
+                        <a href="#blogs">BLOG</a>
+                        <a href="#services">SERVICE</a>
+                    </nav>
+                    <br>
+
+                </header>
+                <section>
+
+                    <h2 class="section-head" id="about-me">About</h2>
+                    <p>Jiayi Zhou is a Ph.D. Student at <a
+                            href="https://hkust.edu.hk/zh-hant">The Hong Kong
+                            University
+                            of Science and Technology</a>, advised by
+                        <a href="http://huamin.org/">Prof. Huamin Qu</a> in the
                         <a
-                            href="blog-collecting-dots.html">New Zealand
-                            adventure</a>
-                        and
-                        <a href="blog-rowing.html">reflections from
-                            the rowing championship experience.</a>
-                    </li>
-                    <div id="older-announcements" style="display: none;">
-                        <li>[May. 2024] Attending the <a
-                                href="https://chi2024.acm.org/">CHI 2024</a> in
-                            Honolulu, Hawaiʻi!</li>
-                        <li>[May. 2024] Our <a
-                                href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">paper</a>
-                            about human-AI co-creativity is going to be
-                            presented at
-                            <a href="https://chi2024.acm.org/">CHI 2024</a>.
-                            Grateful for the excellent collaboration with all
-                            co-authors :)</li>
-                        <li>[Jan. 2024] Our <a
-                                href="https://ieeexplore.ieee.org/document/10415212">paper</a>
-                            about Fixed-order event sequence visualization has
-                            been
-                            accepted to <a
-                                href="https://www.computer.org/csdl/journal/tg">TVCG
-                                2024</a>.</li>
-                        <li>[Jul. 2023] Attending the <a
-                                href="https://chinavis.org/2023/english/index_en.html">ChinaVis
-                                2023 conference</a> in Chongqing, China!</li>
-                        <li>[Aug. 2022] Our <a
-                                href="https://dl.acm.org/doi/pdf/10.1145/3534620">paper</a>
-                            about interactive techniques has been accepted to <a
-                                href="https://ubicomp.org/ubicomp2022/">UbiComp
-                                2022</a>.</li>
-                        <li>[Jul. 2022] Our <a
-                                href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">paper</a>
-                            about data transformation has been accepted to <a
-                                href="https://ieeevis.org/year/2022/welcome">VIS
-                                2022</a>.</li>
+                            href="http://vis.cse.ust.hk/">HKUST VisLab</a>, and
+                        co-advised by <a href="https://anyirao.com/">Prof. Anyi
+                            Rao</a> in the <a
+                            href="https://mmlab-hkust.github.io/">Multimedia
+                            Creativity Lab</a>. Before that,
+                        she received her Bachelor of Engineering (B.Eng) degree
+                        in
+                        industrial design, graduating with honors as an
+                        Outstanding
+                        Graduate from
+                        <a
+                            href="https://www.zju.edu.cn/english/">Zhejiang
+                            University</a> in 2024.</p>
+
+                    <p>Her research interests lie at the intersection of
+                        <strong>Data Visualization</strong> and
+                        <strong>Human-Computer Interaction</strong>. She is
+                        curious
+                        about how creators <strong>"connect the dots"</strong>
+                        in
+                        storytelling amidst the explosion of information. She
+                        investigates how advanced Artificial
+                        Intelligence, including GenAI and computer vision
+                        models,
+                        can empower the visual storytelling process.</p>
+                    <p>In daily life, Jiayi seeks <strong>moments of
+                            "connection"</strong> with nature, her <span
+                            class="cat-hover">beloved cat</span>, her
+                        body, and like-minded individuals. She aspires to be a
+                        dedicated rower, an imaginative designer, and a
+                        perceptive
+                        photographer.</p>
+
+                    <br>
+
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px 1rem;">
+                        <h2 class="section-head" id="news"
+                            style="margin: 0;">Announcement</h2>
+                        <div class="publication-filter">
+                            <div class="tag" id="toggle-announcements"
+                                onclick="toggleAnnouncements()"
+                                style="cursor: pointer; margin-left: 8px;">Show
+                                More</div>
+                        </div>
                     </div>
-                </ul>
-                <br>
-
-                <div
-                    style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px -15px;">
-                    <h2 class="section-head" id="publications"
-                        style="margin: 0;">Publication</h2>
-                    <div class="publication-filter">
-                        <div class="tag" id="tag_all">All</div>
-                        <div class="tag" id="tag_featured"
-                            style="margin-left: 8px;">Featured</div>
-                    </div>
-                </div>
-
-                <div class="publications">
-                    <ol class="bibliography">
-
-                        <li class="publication-item">
-                            <div class="pub-row">
-                                <div class="col-sm-3 abbr"
-                                    style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                    <img src="./assets/img/collaposer_540w.jpg"
-                                        class="teaser img-fluid z-depth-1">
-                                </div>
-                                <div class="col-sm-9"
-                                    style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                    <div class="title"><a href="#">Transforming
-                                            Photo Collections into
-                                            Visual Assets for Storytelling with
-                                            Collages</a></div>
-                                    <div class="author">Anonymous
-                                        Author(s)</div>
-                                    <div class="periodical">
-                                    </div>
-                                    <div class="links proj-tag">
-                                        <a
-                                            href="https://jiayzhou.github.io/collaposer-website/"
-                                            target="_blank" title="website">
-                                            <i class="fas fa-home"></i> website
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                    <ul>
+                        <li>[Sep. 2025] Excited to attend <a
+                                href="https://uist.acm.org/2025/">UIST 2025</a>
+                            in
+                            Busan, South Korea in late September!</li>
+                        <li>[Sep. 2025] Check my new posts about a
+                            <a
+                                href="blog-collecting-dots.html">New Zealand
+                                adventure</a>
+                            and
+                            <a href="blog-rowing.html">reflections from
+                                the rowing championship experience.</a>
                         </li>
+                        <div id="older-announcements" style="display: none;">
+                            <li>[May. 2024] Attending the <a
+                                    href="https://chi2024.acm.org/">CHI 2024</a>
+                                in
+                                Honolulu, Hawaiʻi!</li>
+                            <li>[May. 2024] Our <a
+                                    href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">paper</a>
+                                about human-AI co-creativity is going to be
+                                presented at
+                                <a href="https://chi2024.acm.org/">CHI 2024</a>.
+                                Grateful for the excellent collaboration with
+                                all
+                                co-authors :)</li>
+                            <li>[Jan. 2024] Our <a
+                                    href="https://ieeexplore.ieee.org/document/10415212">paper</a>
+                                about Fixed-order event sequence visualization
+                                has
+                                been
+                                accepted to <a
+                                    href="https://www.computer.org/csdl/journal/tg">TVCG
+                                    2024</a>.</li>
+                            <li>[Jul. 2023] Attending the <a
+                                    href="https://chinavis.org/2023/english/index_en.html">ChinaVis
+                                    2023 conference</a> in Chongqing,
+                                China!</li>
+                            <li>[Aug. 2022] Our <a
+                                    href="https://dl.acm.org/doi/pdf/10.1145/3534620">paper</a>
+                                about interactive techniques has been accepted
+                                to <a
+                                    href="https://ubicomp.org/ubicomp2022/">UbiComp
+                                    2022</a>.</li>
+                            <li>[Jul. 2022] Our <a
+                                    href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">paper</a>
+                                about data transformation has been accepted to
+                                <a
+                                    href="https://ieeevis.org/year/2022/welcome">VIS
+                                    2022</a>.</li>
+                        </div>
+                    </ul>
+                    <br>
 
-                        <li class="publication-item">
-                            <div class="pub-row">
-                                <div class="col-sm-3 abbr"
-                                    style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                    <img src="./assets/img/sonnet_540w.jpg"
-                                        class="teaser img-fluid z-depth-1">
-                                    <abbr class="badge">SIGGRAPH Art 2024</abbr>
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px -15px;">
+                        <h2 class="section-head" id="publications"
+                            style="margin: 0;">Publication</h2>
+                        <div class="publication-filter">
+                            <div class="tag" id="tag_all">All</div>
+                            <div class="tag" id="tag_featured"
+                                style="margin-left: 8px;">Featured</div>
+                        </div>
+                    </div>
+
+                    <div class="publications">
+                        <ol class="bibliography">
+
+                            <li class="publication-item">
+                                <div class="pub-row">
+                                    <div class="col-sm-3 abbr"
+                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                        <img
+                                            src="./assets/img/collaposer_540w.jpg"
+                                            class="teaser img-fluid z-depth-1">
+                                    </div>
+                                    <div class="col-sm-9"
+                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                        <div class="title"><a
+                                                href="#">Transforming
+                                                Photo Collections into
+                                                Visual Assets for Storytelling
+                                                with
+                                                Collages</a></div>
+                                        <div class="author">Anonymous
+                                            Author(s)</div>
+                                        <div class="periodical">
+                                        </div>
+                                        <div class="links proj-tag">
+                                            <a
+                                                href="https://jiayzhou.github.io/collaposer-website/"
+                                                target="_blank" title="website">
+                                                <i class="fas fa-home"></i>
+                                                website
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-sm-9"
-                                    style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                    <div class="title"><a
-                                            href="https://dl.acm.org/doi/pdf/10.1145/3641523.3669939">Loss
-                                            of Sonnet 18</a></div>
-                                    <div class="author">Junxiu Tang,
-                                        <strong>Jiayi Zhou</strong>, Yifang
-                                        Wang, Xinhuan Shu, Peiquan Xia, Xiaojiao
-                                        Chen, Tan Tang, Yingcai Wu</div>
-                                    <!-- <div class="periodical">SIGGRAPH 2024,
+                            </li>
+
+                            <li class="publication-item">
+                                <div class="pub-row">
+                                    <div class="col-sm-3 abbr"
+                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                        <img src="./assets/img/sonnet_540w.jpg"
+                                            class="teaser img-fluid z-depth-1">
+                                        <abbr class="badge">SIGGRAPH Art
+                                            2024</abbr>
+                                    </div>
+                                    <div class="col-sm-9"
+                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                        <div class="title"><a
+                                                href="https://dl.acm.org/doi/pdf/10.1145/3641523.3669939">Loss
+                                                of Sonnet 18</a></div>
+                                        <div class="author">Junxiu Tang,
+                                            <strong>Jiayi Zhou</strong>, Yifang
+                                            Wang, Xinhuan Shu, Peiquan Xia,
+                                            Xiaojiao
+                                            Chen, Tan Tang, Yingcai Wu</div>
+                                        <!-- <div class="periodical">SIGGRAPH 2024,
                                         Art Gallery.
                                     </div> -->
-                                    <div class="links proj-tag">
-                                        <a
-                                            href="https://dl.acm.org/doi/10.1145/3641523.3669939"
-                                            target="_blank" title="doi">
-                                            <i class="fas fa-link"></i> doi
-                                        </a>
+                                        <div class="links proj-tag">
+                                            <a
+                                                href="https://dl.acm.org/doi/10.1145/3641523.3669939"
+                                                target="_blank" title="doi">
+                                                <i class="fas fa-link"></i> doi
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="publication-item featured">
-                            <div class="pub-row">
-                                <div class="col-sm-3 abbr"
-                                    style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                    <img src="./assets/img/optimuse_540w.jpg"
-                                        class="teaser img-fluid z-depth-1">
-                                    <abbr class="badge">CHI 2024</abbr>
-                                </div>
-                                <div class="col-sm-9"
-                                    style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                    <div class="title"><a
-                                            href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">Understanding
-                                            Nonlinear Collaboration between
-                                            Human and AI Agents: A Co-design
-                                            Framework for Creative
-                                            Design</a></div>
-                                    <div class="author"><strong>Jiayi
-                                            Zhou</strong>, Renzhong Li, Junxiu
-                                        Tang, Tan Tang*, Haotian Li, Weiwei Cui,
-                                        Yingcai Wu</div>
-                                    <!-- <div class="periodical">CHI 2024.
+                            <li class="publication-item featured">
+                                <div class="pub-row">
+                                    <div class="col-sm-3 abbr"
+                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                        <img
+                                            src="./assets/img/optimuse_540w.jpg"
+                                            class="teaser img-fluid z-depth-1">
+                                        <abbr class="badge">CHI 2024</abbr>
+                                    </div>
+                                    <div class="col-sm-9"
+                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                        <div class="title"><a
+                                                href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">Understanding
+                                                Nonlinear Collaboration between
+                                                Human and AI Agents: A Co-design
+                                                Framework for Creative
+                                                Design</a></div>
+                                        <div class="author"><strong>Jiayi
+                                                Zhou</strong>, Renzhong Li,
+                                            Junxiu
+                                            Tang, Tan Tang*, Haotian Li, Weiwei
+                                            Cui,
+                                            Yingcai Wu</div>
+                                        <!-- <div class="periodical">CHI 2024.
                                     </div> -->
-                                    <div class="links proj-tag">
-                                        <a
-                                            href="https://dl.acm.org/doi/10.1145/3613904.3642812"
-                                            target="_blank" title="doi">
-                                            <i class="fas fa-link"></i> doi
-                                        </a>
-                                        <a
-                                            href="https://arxiv.org/abs/2401.07312"
-                                            target="_blank" title="arxiv">
-                                            <i class="far fa-file"></i> arxiv
-                                        </a>
+                                        <div class="links proj-tag">
+                                            <a
+                                                href="https://dl.acm.org/doi/10.1145/3613904.3642812"
+                                                target="_blank" title="doi">
+                                                <i class="fas fa-link"></i> doi
+                                            </a>
+                                            <a
+                                                href="https://arxiv.org/abs/2401.07312"
+                                                target="_blank" title="arxiv">
+                                                <i class="far fa-file"></i>
+                                                arxiv
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="publication-item">
-                            <div class="pub-row">
-                                <div class="col-sm-3 abbr"
-                                    style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                    <img src="./assets/img/stringline_540w.jpg"
-                                        class="teaser img-fluid z-depth-1">
-                                    <abbr class="badge">TVCG 2024</abbr>
-                                </div>
-                                <div class="col-sm-9"
-                                    style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                    <div class="title"><a
-                                            href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10415212">A
-                                            Comparative Study on Fixed-order
-                                            Event Sequence Visualizations:
-                                            Gantt, Extended Gantt, and
-                                            Stringline Charts</a></div>
-                                    <div class="author">Junxiu Tang, Fumeng
-                                        Yang, Jiang Wu, Yifang Wang,
-                                        <strong>Jiayi Zhou</strong>, Xiwen Cai,
-                                        Lingyun Yu, Yingcai Wu*</div>
-                                    <!-- <div class="periodical">TVCG 2024.
+                            <li class="publication-item">
+                                <div class="pub-row">
+                                    <div class="col-sm-3 abbr"
+                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                        <img
+                                            src="./assets/img/stringline_540w.jpg"
+                                            class="teaser img-fluid z-depth-1">
+                                        <abbr class="badge">TVCG 2024</abbr>
+                                    </div>
+                                    <div class="col-sm-9"
+                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                        <div class="title"><a
+                                                href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10415212">A
+                                                Comparative Study on Fixed-order
+                                                Event Sequence Visualizations:
+                                                Gantt, Extended Gantt, and
+                                                Stringline Charts</a></div>
+                                        <div class="author">Junxiu Tang, Fumeng
+                                            Yang, Jiang Wu, Yifang Wang,
+                                            <strong>Jiayi Zhou</strong>, Xiwen
+                                            Cai,
+                                            Lingyun Yu, Yingcai Wu*</div>
+                                        <!-- <div class="periodical">TVCG 2024.
                                     </div> -->
-                                    <div class="links proj-tag">
-                                        <a
-                                            href="https://ieeexplore.ieee.org/document/10415212"
-                                            target="_blank" title="doi">
-                                            <i class="fas fa-link"></i> doi
-                                        </a>
+                                        <div class="links proj-tag">
+                                            <a
+                                                href="https://ieeexplore.ieee.org/document/10415212"
+                                                target="_blank" title="doi">
+                                                <i class="fas fa-link"></i> doi
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="publication-item">
-                            <div class="pub-row">
-                                <div class="col-sm-3 abbr"
-                                    style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                    <img src="./assets/img/rigel_540w.jpg"
-                                        class="teaser img-fluid z-depth-1">
-                                    <abbr class="badge">VIS 2022</abbr>
-                                </div>
-                                <div class="col-sm-9"
-                                    style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                    <div class="title"><a
-                                            href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">Rigel:
-                                            Transforming Tabular Data by
-                                            Declarative Mapping</a></div>
-                                    <div class="author">Junxiu Tang, Tan Tang,
-                                        <strong>Jiayi Zhou</strong>, Lingyun Yu,
-                                        Yingcai Wu*</div>
-                                    <div class="links proj-tag">
-                                        <a
-                                            href="https://ieeexplore.ieee.org/document/9908529"
-                                            target="_blank" title="doi">
-                                            <i class="fas fa-link"></i> doi
-                                        </a>
+                            <li class="publication-item">
+                                <div class="pub-row">
+                                    <div class="col-sm-3 abbr"
+                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                        <img src="./assets/img/rigel_540w.jpg"
+                                            class="teaser img-fluid z-depth-1">
+                                        <abbr class="badge">VIS 2022</abbr>
+                                    </div>
+                                    <div class="col-sm-9"
+                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                        <div class="title"><a
+                                                href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">Rigel:
+                                                Transforming Tabular Data by
+                                                Declarative Mapping</a></div>
+                                        <div class="author">Junxiu Tang, Tan
+                                            Tang,
+                                            <strong>Jiayi Zhou</strong>, Lingyun
+                                            Yu,
+                                            Yingcai Wu*</div>
+                                        <div class="links proj-tag">
+                                            <a
+                                                href="https://ieeexplore.ieee.org/document/9908529"
+                                                target="_blank" title="doi">
+                                                <i class="fas fa-link"></i> doi
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="publication-item">
-                            <div class="pub-row">
-                                <div class="col-sm-3 abbr"
-                                    style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                    <img src="./assets/img/shoes_540w.jpg"
-                                        class="teaser img-fluid z-depth-1">
-                                    <abbr class="badge">IMWUT 2022</abbr>
-                                </div>
-                                <div class="col-sm-9"
-                                    style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                    <div class="title"><a
-                                            href="https://dl.acm.org/doi/pdf/10.1145/3534620">Shoes++:
-                                            A Smart Detachable Sole for Social
-                                            Foot-to-foot Interaction</a></div>
-                                    <div class="author">Zihan Yan, <strong>Jiayi
-                                            Zhou</strong>, Yufei Wu, Guanhong
-                                        Liu, Danli Luo, Zihong Zhou, Haipeng Mi,
-                                        Lingyun Sun, Xiang 'Anthony' Chen, Ye
-                                        Tao, Yang Zhang, Guanyun Wang*</div>
-                                    <!-- <div class="periodical">IMWUT 2022.
+                            <li class="publication-item">
+                                <div class="pub-row">
+                                    <div class="col-sm-3 abbr"
+                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                        <img src="./assets/img/shoes_540w.jpg"
+                                            class="teaser img-fluid z-depth-1">
+                                        <abbr class="badge">IMWUT 2022</abbr>
+                                    </div>
+                                    <div class="col-sm-9"
+                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                        <div class="title"><a
+                                                href="https://dl.acm.org/doi/pdf/10.1145/3534620">Shoes++:
+                                                A Smart Detachable Sole for
+                                                Social
+                                                Foot-to-foot
+                                                Interaction</a></div>
+                                        <div class="author">Zihan Yan,
+                                            <strong>Jiayi
+                                                Zhou</strong>, Yufei Wu,
+                                            Guanhong
+                                            Liu, Danli Luo, Zihong Zhou, Haipeng
+                                            Mi,
+                                            Lingyun Sun, Xiang 'Anthony' Chen,
+                                            Ye
+                                            Tao, Yang Zhang, Guanyun Wang*</div>
+                                        <!-- <div class="periodical">IMWUT 2022.
                                     </div> -->
-                                    <div class="links proj-tag">
-                                        <a
-                                            href="https://dl.acm.org/doi/10.1145/3534620"
-                                            target="_blank" title="doi">
-                                            <i class="fas fa-link"></i> doi
-                                        </a>
+                                        <div class="links proj-tag">
+                                            <a
+                                                href="https://dl.acm.org/doi/10.1145/3534620"
+                                                target="_blank" title="doi">
+                                                <i class="fas fa-link"></i> doi
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ol>
-                </div>
+                            </li>
+                        </ol>
+                    </div>
 
-                <h2 class="section-head" id="blogs">Blog</h2>
-                <p>Paper Submission Reflection: Behind the Scenes • <a
-                        href="blog-rowing.html">What I Talk about When I Talk
-                        about Rowing</a> • Jiayi's Bookshelf • <a
-                        href="blog-collecting-dots.html">Collecting the
-                        Dots</a></p>
+                    <h2 class="section-head" id="blogs">Blog</h2>
+                    <p>Paper Submission Reflection: Behind the Scenes • <a
+                            href="blog-rowing.html">What I Talk about When I
+                            Talk
+                            about Rowing</a> • Jiayi's Bookshelf • <a
+                            href="blog-collecting-dots.html">Collecting the
+                            Dots</a></p>
 
-                <!-- <ul>
+                    <!-- <ul>
                     <li><a href="#">Paper Submission Reflection: Behind the
                             Scenes</a></li>
                     <li><a href="blog-rowing.html">What I Talk about When I Talk about
@@ -630,42 +683,45 @@
                     <li><a href="blog-collecting-dots.html">Collecting the Dots</a></li>
                 </ul> -->
 
-                <h2 class="section-head" id="services">Service</h2>
+                    <h2 class="section-head" id="services">Service</h2>
 
-                <h4 style="margin:0 10px 0;">Research Assistants</h4>
-                <ul>
-                    <li>[Mar. 2022 - June. 2024] <a
-                            href="https://zjuidg.org/">Interactive Data
-                            Group</a>, Zhejiang University, advised by <a
-                            href="http://www.ycwu.org/">Prof. Yingcai Wu</a> and
-                        <a href="https://tantang.org/">Prof. Tan Tang</a></li>
-                    <li>[Oct. 2021 - Mar. 2022] <a
-                            href="https://design.zju.edu.cn/guanyunlab/">Guanyun
-                            Lab</a>, Zhejiang University, advised by <a
-                            href="https://www.guanyundesign.com/">Prof. Guanyun
-                            Wang</a></li>
-                </ul>
+                    <h4 style="margin:0 10px 0;">Research Assistants</h4>
+                    <ul>
+                        <li>[Mar. 2022 - June. 2024] <a
+                                href="https://zjuidg.org/">Interactive Data
+                                Group</a>, Zhejiang University, advised by <a
+                                href="http://www.ycwu.org/">Prof. Yingcai Wu</a>
+                            and
+                            <a href="https://tantang.org/">Prof. Tan
+                                Tang</a></li>
+                        <li>[Oct. 2021 - Mar. 2022] <a
+                                href="https://design.zju.edu.cn/guanyunlab/">Guanyun
+                                Lab</a>, Zhejiang University, advised by <a
+                                href="https://www.guanyundesign.com/">Prof.
+                                Guanyun
+                                Wang</a></li>
+                    </ul>
 
-                <h4 style="margin:0 10px 0;">Conference Reviewers</h4>
-                <ul>
-                    <li>[2024, 2025] <a
-                            href="https://dl.acm.org/conference/chi">The
-                            ACM Conference on Human Factors in Computing
-                            Systems (CHI)</a></li>
-                    <li>[2025] <a
-                            href="https://cvpr.thecvf.com/">The
-                            IEEE/CVF Conference on Computer Vision and
-                            Pattern Recognition (CVPR)</a></li>
-                </ul>
+                    <h4 style="margin:0 10px 0;">Conference Reviewers</h4>
+                    <ul>
+                        <li>[2024, 2025, 2026] <a
+                                href="https://dl.acm.org/conference/chi">The
+                                ACM Conference on Human Factors in Computing
+                                Systems (CHI)</a></li>
+                        <li>[2025] <a
+                                href="https://cvpr.thecvf.com/">The
+                                IEEE/CVF Conference on Computer Vision and
+                                Pattern Recognition (CVPR)</a></li>
+                    </ul>
 
-                <br>
-                <email>@2025 Jiayi Zhou.</email>
+                    <br>
+                    <email>@2025 Jiayi Zhou.</email>
 
-            </section>
-        </div>
+                </section>
+            </div>
 
-        <!-- Footer -->
-        <!--
+            <!-- Footer -->
+            <!--
         <footer
             style="background-color: #fffef9; width: 100%; text-align: center; padding: 20px 0; margin-top: 2em">
             <div id="clustrmaps-container">
@@ -674,10 +730,10 @@
             </div>
         </footer>
         -->
-        <script src="./assets/js/scale.fix.js"></script>
+            <script src="./assets/js/scale.fix.js"></script>
 
-        <!-- Theme toggle functionality -->
-        <script>
+            <!-- Theme toggle functionality -->
+            <script>
         // Theme manager
         class ThemeManager {
             constructor() {
@@ -852,6 +908,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             new ThemeManager();
             initPublicationFilter();
+            initCatInteraction();
         });
         
         // If DOMContentLoaded has already fired, initialize immediately
@@ -859,10 +916,12 @@
             document.addEventListener('DOMContentLoaded', () => {
                 new ThemeManager();
                 initPublicationFilter();
+                initCatInteraction();
             });
         } else {
             new ThemeManager();
             initPublicationFilter();
+            initCatInteraction();
         }
 
         // Publication filter functionality
@@ -926,6 +985,48 @@
                 toggleButton.classList.remove('selected');
             }
         }
+
+        // Cat interaction functionality
+        function initCatInteraction() {
+            let catFound = false;
+            let passedAnnouncement = false;
+
+            const avatarImg = document.getElementById('avatar-img');
+            const avatarMessage = document.getElementById('avatar-message');
+            const catElement = document.querySelector('.cat-hover');
+
+            if (!avatarImg || !avatarMessage || !catElement) return;
+
+            // Monitor cat hover/click
+            catElement.addEventListener('mouseenter', function () {
+                if (!catFound) {
+                    catFound = true;
+                    passedAnnouncement = false; // Reset "miss the cat" state
+                    avatarImg.src = './assets/img/smile_540w.jpg';
+                    avatarMessage.textContent = 'Yay! You found the cat!';
+                    avatarMessage.style.color = 'var(--link-highlight)'; // Use hover color
+                }
+            });
+
+            // Monitor when the user scrolls to the bottom of the page
+            function handleScroll() {
+                const scrollPosition = window.scrollY + window.innerHeight;
+                const pageHeight = document.body.scrollHeight;
+
+                if (scrollPosition >= pageHeight && !catFound && !passedAnnouncement) {
+                    passedAnnouncement = true;
+                    avatarImg.src = './assets/img/angry_540w.jpg';
+                    avatarMessage.textContent = 'Oops, you missed the cat!';
+                    avatarMessage.style.color = '#B42C14'; // Use "missing the cat" color
+
+                    // Remove the scroll event listener after triggering
+                    window.removeEventListener('scroll', handleScroll);
+                }
+            }
+
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+        }
         </script>
-    </body>
-</html>
+        </body>
+    </html>
