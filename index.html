@@ -1,54 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <title>Jiayi Zhou | The Hong Kong University of Science and
-            Technology</title>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description"
-            content="The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.">
-        <meta name="keywords" content="minimal light">
-        <link rel="canonical" href="https://minimal-light-theme.yliu.me/" />
+<head>
+    <title>Jiayi Zhou | The Hong Kong University of Science and
+        Technology</title>
 
-        <link rel="icon" media="(prefers-color-scheme:dark)"
-            href="./assets/img/jiayi.svg" type="image/svg+xml" />
-        <link rel="icon" media="(prefers-color-scheme:light)"
-            href="./assets/img/jiayi.svg" type="image/svg+xml" />
-        <script src="./assets/js/favicon-switcher.js"
-            type="application/javascript"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.">
+    <meta name="keywords" content="minimal light">
+    <link rel="canonical" href="https://minimal-light-theme.yliu.me/" />
 
-        <link rel=stylesheet
-            href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
-            integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw="
-            crossorigin=anonymous>
-        <link rel=stylesheet
-            href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
-            integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
-            crossorigin=anonymous>
+    <link rel="icon" media="(prefers-color-scheme:dark)" href="./assets/img/jiayi.svg" type="image/svg+xml" />
+    <link rel="icon" media="(prefers-color-scheme:light)" href="./assets/img/jiayi.svg" type="image/svg+xml" />
+    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
-            rel="stylesheet">
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css
+        integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
 
-        <link rel="stylesheet" href="./assets/css/font.css">
-        <link rel="stylesheet" href="./assets/css/style.css"
-            id="main-stylesheet">
-        <link rel="stylesheet" href="./assets/css/publications.css"
-            id="main-publications-stylesheet">
-        <link rel="preload" href="./assets/css/style.css" as="style"
-            id="dark-css">
-        <link rel="preload" href="./assets/css/style-no-dark-mode.css"
-            as="style" id="light-css">
-        <link rel="preload" href="./assets/css/publications.css" as="style"
-            id="dark-publications-css">
-        <link rel="preload" href="./assets/css/publications-no-dark-mode.css"
-            as="style" id="light-publications-css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 
-        <style>
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css" id="main-stylesheet">
+    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css" id="main-publications-stylesheet">
+    <link rel="preload" href="./assets/css/style.css" as="style" id="dark-css">
+    <link rel="preload" href="./assets/css/style-no-dark-mode.css" as="style" id="light-css">
+    <link rel="preload" href="./assets/css/publications.css" as="style" id="dark-publications-css">
+    <link rel="preload" href="./assets/css/publications-no-dark-mode.css" as="style" id="light-publications-css">
+
+    <style>
         .theme-toggle {
             position: fixed;
             top: 20px;
@@ -76,77 +62,77 @@
             color: #3eb7f0 !important;
         }
 
-        .sun-and-moon > :is(.moon, .sun, .sun-beams) {
+        .sun-and-moon> :is(.moon, .sun, .sun-beams) {
             transform-origin: center;
         }
 
-        .sun-and-moon > :is(.moon, .sun) {
+        .sun-and-moon> :is(.moon, .sun) {
             fill: currentColor;
         }
 
-        .theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
+        .theme-toggle:is(:hover, :focus-visible)>.sun-and-moon> :is(.moon, .sun) {
             fill: currentColor;
         }
 
-        .sun-and-moon > .sun-beams {
+        .sun-and-moon>.sun-beams {
             stroke: currentColor;
             stroke-width: 2px;
         }
 
-        .theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
+        .theme-toggle:is(:hover, :focus-visible) .sun-and-moon>.sun-beams {
             stroke: currentColor;
         }
 
-        [data-theme="dark"] .sun-and-moon > .sun {
+        [data-theme="dark"] .sun-and-moon>.sun {
             transform: scale(1.75);
         }
 
-        [data-theme="dark"] .sun-and-moon > .sun-beams {
+        [data-theme="dark"] .sun-and-moon>.sun-beams {
             opacity: 0;
         }
 
-        [data-theme="dark"] .sun-and-moon > .moon > circle {
+        [data-theme="dark"] .sun-and-moon>.moon>circle {
             transform: translateX(-7px);
         }
 
         @supports (cx: 1) {
-            [data-theme="dark"] .sun-and-moon > .moon > circle {
+            [data-theme="dark"] .sun-and-moon>.moon>circle {
                 cx: 17;
                 transform: translateX(0);
             }
         }
 
         @media (prefers-reduced-motion: no-preference) {
-            .sun-and-moon > .sun {
+            .sun-and-moon>.sun {
                 transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             }
 
-            .sun-and-moon > .sun-beams {
+            .sun-and-moon>.sun-beams {
                 transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity .5s ease;
             }
 
-            .sun-and-moon .moon > circle {
+            .sun-and-moon .moon>circle {
                 transition: transform .25s ease-out;
             }
 
             @supports (cx: 1) {
-                .sun-and-moon .moon > circle {
+                .sun-and-moon .moon>circle {
                     transition: cx .25s ease-out;
                 }
             }
 
-            [data-theme="dark"] .sun-and-moon > .sun {
+            [data-theme="dark"] .sun-and-moon>.sun {
                 transition-timing-function: ease;
                 transition-duration: .25s;
                 transform: scale(1.75);
             }
 
-            [data-theme="dark"] .sun-and-moon > .sun-beams {
+            [data-theme="dark"] .sun-and-moon>.sun-beams {
                 transition-duration: .15s;
                 transform: rotateZ(-25deg);
             }
 
-            [data-theme="dark"] .sun-and-moon > .moon > circle {
+            [data-theme="dark"] .sun-and-moon>.moon>circle {
                 transition-duration: .5s;
                 transition-delay: .25s;
             }
@@ -230,451 +216,399 @@
                 height: 80px;
                 transform: translateX(-50%) translateY(10px);
             }
-            
+
             .cat-hover:hover::after {
                 transform: translateX(-50%) translateY(0);
             }
         }
-        </style>
+    </style>
 
-    </head>
-    <body>
-        <button class="theme-toggle" id="themeToggle" title="mode switch"
-            aria-label="auto" aria-live="polite">
-            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24"
-                viewBox="0 0 24 24">
-                <mask class="moon" id="moon-mask">
-                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
-                    <circle cx="24" cy="10" r="6" fill="black" />
-                </mask>
-                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)"
-                    fill="currentColor" />
-                <g class="sun-beams" stroke="currentColor">
-                    <line x1="12" y1="1" x2="12" y2="3" />
-                    <line x1="12" y1="21" x2="12" y2="23" />
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                    <line x1="1" y1="12" x2="3" y2="12" />
-                    <line x1="21" y1="12" x2="23" y2="12" />
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                </g>
-            </svg>
-        </button>
+</head>
 
-        <div class="wrapper">
-            <header>
+<body>
+    <button class="theme-toggle" id="themeToggle" title="mode switch" aria-label="auto" aria-live="polite">
+        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+            <mask class="moon" id="moon-mask">
+                <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                <circle cx="24" cy="10" r="6" fill="black" />
+            </mask>
+            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+            <g class="sun-beams" stroke="currentColor">
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+        </svg>
+    </button>
 
-                <p id="avatar-message"
-                    style="margin-bottom: -8px; font-size: 0.8rem; text-align: center; transition: all 0.3s ease;">
-                    Can you spot the cat on my page?
-                </p>
+    <div class="wrapper">
+        <header>
 
-                <a class="image avatar"><img
-                        src="./assets/img/speak_540w.jpg"
-                        alt="avatar" id="avatar-img" /></a>
+            <p id="avatar-message"
+                style="margin-bottom: -8px; font-size: 0.8rem; text-align: center; transition: all 0.3s ease;">
+                Can you spot the cat on my page?
+            </p>
 
-                <h1
-                    style="font-family: 'Tangerine', cursive, serif; font-size: 2.15rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                    Jiayi Zhou
-                    <a href="http://www.next.zju.edu.cn/seal/#/" target="_blank"
-                        title="Seal from @Zhejiang University">
-                        <img src="./assets/img/jiayi.svg" alt="Jiayi Icon"
-                            style="width: 24px; height: 24px;">
-                    </a>
-                </h1>
+            <a class="image avatar"><img src="./assets/img/speak_540w.jpg" alt="avatar" id="avatar-img" /></a>
 
-                <email>UC101, HKUST, Clear Water Bay, HK.</email><br>
-                <email>jzhoudp/at/connect/dot/ust/dot/hk</email>
+            <h1
+                style="font-family: 'Tangerine', cursive, serif; font-size: 2.15rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                Jiayi Zhou
+                <a href="http://www.next.zju.edu.cn/seal/#/" target="_blank" title="Seal from @Zhejiang University">
+                    <img src="./assets/img/jiayi.svg" alt="Jiayi Icon" style="width: 24px; height: 24px;">
+                </a>
+            </h1>
 
-                <br>
-                <div class="social-icons">
-                    <a style="margin: 0 5px 0 0"
-                        href="https://scholar.google.com/citations?user=3HqYcs4AAAAJ&hl=zh-CN&oi=sra">
-                        <i class="ai ai-google-scholar"
-                            style="font-size:1.2rem"></i>
-                    </a>
+            <email>UC101, HKUST, Clear Water Bay, HK.</email><br>
+            <email>jzhoudp/at/connect/dot/ust/dot/hk</email>
 
-                    <a style="margin: 0 5px 0 0"
-                        href="assets/files/Jiayi_s_CV.pdf">
-                        <i class="ai ai-cv" style="font-size:1.3rem;"></i>
-                    </a>
+            <br>
+            <div class="social-icons">
+                <a style="margin: 0 5px 0 0"
+                    href="https://scholar.google.com/citations?user=3HqYcs4AAAAJ&hl=zh-CN&oi=sra">
+                    <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
+                </a>
 
-                    <!-- <a style="margin: 0 5px 0 0"
+                <a style="margin: 0 5px 0 0" href="assets/files/Jiayi_s_CV.pdf">
+                    <i class="ai ai-cv" style="font-size:1.3rem;"></i>
+                </a>
+
+                <!-- <a style="margin: 0 5px 0 0"
                         href="https://github.com/JiayZhou">
                         <i class="fab fa-github"></i>
                     </a> -->
 
-                    <a style="margin: 0 5px 0 0"
-                        href="https://www.instagram.com/jiayizhouzoe/">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                <a style="margin: 0 5px 0 0" href="https://www.instagram.com/jiayizhouzoe/">
+                    <i class="fab fa-instagram"></i>
+                </a>
 
-                    <a style="margin: 0 5px 0 0"
-                        href="https://www.linkedin.com/in/jiayi-zhou-698177283/">
-                        <i class="fab fa-linkedin"></i>
+                <a style="margin: 0 5px 0 0" href="https://www.linkedin.com/in/jiayi-zhou-698177283/">
+                    <i class="fab fa-linkedin"></i>
 
-                        <!-- <a style="margin: 0 0 0 0"
+                    <!-- <a style="margin: 0 0 0 0"
                         href="https://twitter.com/DouziZhou">
                         <i class="fab fa-twitter"></i>
                     </a> -->
-                    </div>
-                    <br>
+            </div>
+            <br>
 
-                    <nav class="section-nav">
-                        <a href="#about-me">ABOUT</a>
-                        <a href="#news">ANNOUNCEMENT</a>
-                        <a href="#publications">PUBLICATION</a>
-                        <a href="#blogs">BLOG</a>
-                        <a href="#services">SERVICE</a>
-                    </nav>
-                    <br>
+            <nav class="section-nav">
+                <a href="#about-me">ABOUT</a>
+                <a href="#news">ANNOUNCEMENT</a>
+                <a href="#publications">PUBLICATION</a>
+                <a href="#blogs">BLOG</a>
+                <a href="#services">SERVICE</a>
+            </nav>
+            <br>
 
-                </header>
-                <section>
+        </header>
+        <section>
 
-                    <h2 class="section-head" id="about-me">About</h2>
-                    <p>Jiayi Zhou is a Ph.D. Student at <a
-                            href="https://hkust.edu.hk/zh-hant">The Hong Kong
-                            University
-                            of Science and Technology</a>, advised by
-                        <a href="http://huamin.org/">Prof. Huamin Qu</a> in the
-                        <a
-                            href="http://vis.cse.ust.hk/">HKUST VisLab</a>, and
-                        co-advised by <a href="https://anyirao.com/">Prof. Anyi
-                            Rao</a> in the <a
-                            href="https://mmlab-hkust.github.io/">Multimedia
-                            Creativity Lab</a>. Before that,
-                        she received her Bachelor of Engineering (B.Eng) degree
+            <h2 class="section-head" id="about-me">About</h2>
+            <p>Jiayi Zhou is a Ph.D. Student at <a href="https://hkust.edu.hk/zh-hant">The Hong Kong
+                    University
+                    of Science and Technology</a>, advised by
+                <a href="http://huamin.org/">Prof. Huamin Qu</a> in the
+                <a href="http://vis.cse.ust.hk/">HKUST VisLab</a>, and
+                co-advised by <a href="https://anyirao.com/">Prof. Anyi
+                    Rao</a> in the <a href="https://mmlab-hkust.github.io/">Multimedia
+                    Creativity Lab</a>. Before that,
+                she received her Bachelor of Engineering (B.Eng) degree
+                in
+                industrial design, graduating with honors as an
+                Outstanding
+                Graduate from
+                <a href="https://www.zju.edu.cn/english/">Zhejiang
+                    University</a> in 2024.
+            </p>
+
+            <p>Her research interests lie at the intersection of
+                <strong>Data Visualization</strong> and
+                <strong>Human-Computer Interaction</strong>. She is
+                curious
+                about how creators <strong>"connect the dots"</strong>
+                in
+                storytelling amidst the explosion of information. She
+                investigates how advanced Artificial
+                Intelligence, including GenAI and computer vision
+                models,
+                can empower the visual storytelling process.
+            </p>
+            <p>In daily life, Jiayi seeks <strong>moments of
+                    "connection"</strong> with nature, her <span class="cat-hover">beloved cat</span>, her
+                body, and like-minded individuals. She aspires to be a
+                dedicated rower, an imaginative designer, and a
+                perceptive
+                photographer.</p>
+
+            <br>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px 1rem;">
+                <h2 class="section-head" id="news" style="margin: 0;">Announcement</h2>
+                <div class="publication-filter">
+                    <div class="tag" id="toggle-announcements" onclick="toggleAnnouncements()"
+                        style="cursor: pointer; margin-left: 8px;">Show
+                        More</div>
+                </div>
+            </div>
+            <ul>
+                <li>[Sep. 2025] Excited to attend <a href="https://uist.acm.org/2025/">UIST 2025</a>
+                    in
+                    Busan, South Korea in late September!</li>
+                <li>[Sep. 2025] Check my new posts about a
+                    <a href="blog-collecting-dots.html">New Zealand
+                        adventure</a>
+                    and
+                    <a href="blog-rowing.html">reflections from
+                        the rowing championship experience.</a>
+                </li>
+                <div id="older-announcements" style="display: none;">
+                    <li>[May. 2024] Attending the <a href="https://chi2024.acm.org/">CHI 2024</a>
                         in
-                        industrial design, graduating with honors as an
-                        Outstanding
-                        Graduate from
-                        <a
-                            href="https://www.zju.edu.cn/english/">Zhejiang
-                            University</a> in 2024.</p>
+                        Honolulu, Hawaiʻi!</li>
+                    <li>[May. 2024] Our <a href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">paper</a>
+                        about human-AI co-creativity is going to be
+                        presented at
+                        <a href="https://chi2024.acm.org/">CHI 2024</a>.
+                        Grateful for the excellent collaboration with
+                        all
+                        co-authors :)
+                    </li>
+                    <li>[Jan. 2024] Our <a href="https://ieeexplore.ieee.org/document/10415212">paper</a>
+                        about Fixed-order event sequence visualization
+                        has
+                        been
+                        accepted to <a href="https://www.computer.org/csdl/journal/tg">TVCG
+                            2024</a>.</li>
+                    <li>[Jul. 2023] Attending the <a href="https://chinavis.org/2023/english/index_en.html">ChinaVis
+                            2023 conference</a> in Chongqing,
+                        China!</li>
+                    <li>[Aug. 2022] Our <a href="https://dl.acm.org/doi/pdf/10.1145/3534620">paper</a>
+                        about interactive techniques has been accepted
+                        to <a href="https://ubicomp.org/ubicomp2022/">UbiComp
+                            2022</a>.</li>
+                    <li>[Jul. 2022] Our <a
+                            href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">paper</a>
+                        about data transformation has been accepted to
+                        <a href="https://ieeevis.org/year/2022/welcome">VIS
+                            2022</a>.
+                    </li>
+                </div>
+            </ul>
+            <br>
 
-                    <p>Her research interests lie at the intersection of
-                        <strong>Data Visualization</strong> and
-                        <strong>Human-Computer Interaction</strong>. She is
-                        curious
-                        about how creators <strong>"connect the dots"</strong>
-                        in
-                        storytelling amidst the explosion of information. She
-                        investigates how advanced Artificial
-                        Intelligence, including GenAI and computer vision
-                        models,
-                        can empower the visual storytelling process.</p>
-                    <p>In daily life, Jiayi seeks <strong>moments of
-                            "connection"</strong> with nature, her <span
-                            class="cat-hover">beloved cat</span>, her
-                        body, and like-minded individuals. She aspires to be a
-                        dedicated rower, an imaginative designer, and a
-                        perceptive
-                        photographer.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px -15px;">
+                <h2 class="section-head" id="publications" style="margin: 0;">Publication</h2>
+                <div class="publication-filter">
+                    <div class="tag" id="tag_all">All</div>
+                    <div class="tag" id="tag_featured" style="margin-left: 8px;">Featured</div>
+                </div>
+            </div>
 
-                    <br>
+            <div class="publications">
+                <ol class="bibliography">
 
-                    <div
-                        style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px 1rem;">
-                        <h2 class="section-head" id="news"
-                            style="margin: 0;">Announcement</h2>
-                        <div class="publication-filter">
-                            <div class="tag" id="toggle-announcements"
-                                onclick="toggleAnnouncements()"
-                                style="cursor: pointer; margin-left: 8px;">Show
-                                More</div>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>[Sep. 2025] Excited to attend <a
-                                href="https://uist.acm.org/2025/">UIST 2025</a>
-                            in
-                            Busan, South Korea in late September!</li>
-                        <li>[Sep. 2025] Check my new posts about a
-                            <a
-                                href="blog-collecting-dots.html">New Zealand
-                                adventure</a>
-                            and
-                            <a href="blog-rowing.html">reflections from
-                                the rowing championship experience.</a>
-                        </li>
-                        <div id="older-announcements" style="display: none;">
-                            <li>[May. 2024] Attending the <a
-                                    href="https://chi2024.acm.org/">CHI 2024</a>
-                                in
-                                Honolulu, Hawaiʻi!</li>
-                            <li>[May. 2024] Our <a
-                                    href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">paper</a>
-                                about human-AI co-creativity is going to be
-                                presented at
-                                <a href="https://chi2024.acm.org/">CHI 2024</a>.
-                                Grateful for the excellent collaboration with
-                                all
-                                co-authors :)</li>
-                            <li>[Jan. 2024] Our <a
-                                    href="https://ieeexplore.ieee.org/document/10415212">paper</a>
-                                about Fixed-order event sequence visualization
-                                has
-                                been
-                                accepted to <a
-                                    href="https://www.computer.org/csdl/journal/tg">TVCG
-                                    2024</a>.</li>
-                            <li>[Jul. 2023] Attending the <a
-                                    href="https://chinavis.org/2023/english/index_en.html">ChinaVis
-                                    2023 conference</a> in Chongqing,
-                                China!</li>
-                            <li>[Aug. 2022] Our <a
-                                    href="https://dl.acm.org/doi/pdf/10.1145/3534620">paper</a>
-                                about interactive techniques has been accepted
-                                to <a
-                                    href="https://ubicomp.org/ubicomp2022/">UbiComp
-                                    2022</a>.</li>
-                            <li>[Jul. 2022] Our <a
-                                    href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">paper</a>
-                                about data transformation has been accepted to
-                                <a
-                                    href="https://ieeevis.org/year/2022/welcome">VIS
-                                    2022</a>.</li>
-                        </div>
-                    </ul>
-                    <br>
-
-                    <div
-                        style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px -15px;">
-                        <h2 class="section-head" id="publications"
-                            style="margin: 0;">Publication</h2>
-                        <div class="publication-filter">
-                            <div class="tag" id="tag_all">All</div>
-                            <div class="tag" id="tag_featured"
-                                style="margin-left: 8px;">Featured</div>
-                        </div>
-                    </div>
-
-                    <div class="publications">
-                        <ol class="bibliography">
-
-                            <li class="publication-item">
-                                <div class="pub-row">
-                                    <div class="col-sm-3 abbr"
-                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                        <img
-                                            src="./assets/img/collaposer_540w.jpg"
-                                            class="teaser img-fluid z-depth-1">
-                                    </div>
-                                    <div class="col-sm-9"
-                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                        <div class="title"><a
-                                                href="#">Transforming
-                                                Photo Collections into
-                                                Visual Assets for Storytelling
-                                                with
-                                                Collages</a></div>
-                                        <div class="author">Anonymous
-                                            Author(s)</div>
-                                        <div class="periodical">
-                                        </div>
-                                        <div class="links proj-tag">
-                                            <a
-                                                href="https://jiayzhou.github.io/collaposer-website/"
-                                                target="_blank" title="website">
-                                                <i class="fas fa-home"></i>
-                                                website
-                                            </a>
-                                        </div>
-                                    </div>
+                    <li class="publication-item featured">
+                        <div class="pub-row">
+                            <div class="col-sm-3 abbr"
+                                style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                <img src="./assets/img/collaposer_540w.jpg" class="teaser img-fluid z-depth-1">
+                                <abbr class="badge">CHI 2026</abbr>
+                            </div>
+                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                <div class="title"><a href="#">Transforming
+                                        Photo Collections into
+                                        Visual Assets for Storytelling
+                                        with
+                                        Collages</a></div>
+                                <div class="author"><strong>Jiayi Zhou</strong>, Liwenhan Xie, Jiaju Ma, Zheng Wei,
+                                    Huamin Qu, Anyi Rao
                                 </div>
-                            </li>
+                                <div class="periodical">
+                                </div>
+                                <div class="links proj-tag">
+                                    <a href="https://jiayzhou.github.io/collaposer-website/" target="_blank"
+                                        title="website">
+                                        <i class="fas fa-home"></i>
+                                        website
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
-                            <li class="publication-item">
-                                <div class="pub-row">
-                                    <div class="col-sm-3 abbr"
-                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                        <img src="./assets/img/sonnet_540w.jpg"
-                                            class="teaser img-fluid z-depth-1">
-                                        <abbr class="badge">SIGGRAPH Art
-                                            2024</abbr>
-                                    </div>
-                                    <div class="col-sm-9"
-                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                        <div class="title"><a
-                                                href="https://dl.acm.org/doi/pdf/10.1145/3641523.3669939">Loss
-                                                of Sonnet 18</a></div>
-                                        <div class="author">Junxiu Tang,
-                                            <strong>Jiayi Zhou</strong>, Yifang
-                                            Wang, Xinhuan Shu, Peiquan Xia,
-                                            Xiaojiao
-                                            Chen, Tan Tang, Yingcai Wu</div>
-                                        <!-- <div class="periodical">SIGGRAPH 2024,
+                    <li class="publication-item">
+                        <div class="pub-row">
+                            <div class="col-sm-3 abbr"
+                                style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                <img src="./assets/img/sonnet_540w.jpg" class="teaser img-fluid z-depth-1">
+                                <abbr class="badge">SIGGRAPH Art
+                                    2024</abbr>
+                            </div>
+                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                <div class="title"><a href="https://dl.acm.org/doi/pdf/10.1145/3641523.3669939">Loss
+                                        of Sonnet 18</a></div>
+                                <div class="author">Junxiu Tang,
+                                    <strong>Jiayi Zhou</strong>, Yifang
+                                    Wang, Xinhuan Shu, Peiquan Xia,
+                                    Xiaojiao
+                                    Chen, Tan Tang, Yingcai Wu
+                                </div>
+                                <!-- <div class="periodical">SIGGRAPH 2024,
                                         Art Gallery.
                                     </div> -->
-                                        <div class="links proj-tag">
-                                            <a
-                                                href="https://dl.acm.org/doi/10.1145/3641523.3669939"
-                                                target="_blank" title="doi">
-                                                <i class="fas fa-link"></i> doi
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="links proj-tag">
+                                    <a href="https://dl.acm.org/doi/10.1145/3641523.3669939" target="_blank"
+                                        title="doi">
+                                        <i class="fas fa-link"></i> doi
+                                    </a>
                                 </div>
-                            </li>
+                            </div>
+                        </div>
+                    </li>
 
-                            <li class="publication-item featured">
-                                <div class="pub-row">
-                                    <div class="col-sm-3 abbr"
-                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                        <img
-                                            src="./assets/img/optimuse_540w.jpg"
-                                            class="teaser img-fluid z-depth-1">
-                                        <abbr class="badge">CHI 2024</abbr>
-                                    </div>
-                                    <div class="col-sm-9"
-                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                        <div class="title"><a
-                                                href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">Understanding
-                                                Nonlinear Collaboration between
-                                                Human and AI Agents: A Co-design
-                                                Framework for Creative
-                                                Design</a></div>
-                                        <div class="author"><strong>Jiayi
-                                                Zhou</strong>, Renzhong Li,
-                                            Junxiu
-                                            Tang, Tan Tang*, Haotian Li, Weiwei
-                                            Cui,
-                                            Yingcai Wu</div>
-                                        <!-- <div class="periodical">CHI 2024.
+                    <li class="publication-item featured">
+                        <div class="pub-row">
+                            <div class="col-sm-3 abbr"
+                                style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                <img src="./assets/img/optimuse_540w.jpg" class="teaser img-fluid z-depth-1">
+                                <abbr class="badge">CHI 2024</abbr>
+                            </div>
+                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                <div class="title"><a
+                                        href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">Understanding
+                                        Nonlinear Collaboration between
+                                        Human and AI Agents: A Co-design
+                                        Framework for Creative
+                                        Design</a></div>
+                                <div class="author"><strong>Jiayi
+                                        Zhou</strong>, Renzhong Li,
+                                    Junxiu
+                                    Tang, Tan Tang*, Haotian Li, Weiwei
+                                    Cui,
+                                    Yingcai Wu</div>
+                                <!-- <div class="periodical">CHI 2024.
                                     </div> -->
-                                        <div class="links proj-tag">
-                                            <a
-                                                href="https://dl.acm.org/doi/10.1145/3613904.3642812"
-                                                target="_blank" title="doi">
-                                                <i class="fas fa-link"></i> doi
-                                            </a>
-                                            <a
-                                                href="https://arxiv.org/abs/2401.07312"
-                                                target="_blank" title="arxiv">
-                                                <i class="far fa-file"></i>
-                                                arxiv
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="links proj-tag">
+                                    <a href="https://dl.acm.org/doi/10.1145/3613904.3642812" target="_blank"
+                                        title="doi">
+                                        <i class="fas fa-link"></i> doi
+                                    </a>
+                                    <a href="https://arxiv.org/abs/2401.07312" target="_blank" title="arxiv">
+                                        <i class="far fa-file"></i>
+                                        arxiv
+                                    </a>
                                 </div>
-                            </li>
+                            </div>
+                        </div>
+                    </li>
 
-                            <li class="publication-item">
-                                <div class="pub-row">
-                                    <div class="col-sm-3 abbr"
-                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                        <img
-                                            src="./assets/img/stringline_540w.jpg"
-                                            class="teaser img-fluid z-depth-1">
-                                        <abbr class="badge">TVCG 2024</abbr>
-                                    </div>
-                                    <div class="col-sm-9"
-                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                        <div class="title"><a
-                                                href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10415212">A
-                                                Comparative Study on Fixed-order
-                                                Event Sequence Visualizations:
-                                                Gantt, Extended Gantt, and
-                                                Stringline Charts</a></div>
-                                        <div class="author">Junxiu Tang, Fumeng
-                                            Yang, Jiang Wu, Yifang Wang,
-                                            <strong>Jiayi Zhou</strong>, Xiwen
-                                            Cai,
-                                            Lingyun Yu, Yingcai Wu*</div>
-                                        <!-- <div class="periodical">TVCG 2024.
+                    <li class="publication-item">
+                        <div class="pub-row">
+                            <div class="col-sm-3 abbr"
+                                style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                <img src="./assets/img/stringline_540w.jpg" class="teaser img-fluid z-depth-1">
+                                <abbr class="badge">TVCG 2024</abbr>
+                            </div>
+                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                <div class="title"><a
+                                        href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10415212">A
+                                        Comparative Study on Fixed-order
+                                        Event Sequence Visualizations:
+                                        Gantt, Extended Gantt, and
+                                        Stringline Charts</a></div>
+                                <div class="author">Junxiu Tang, Fumeng
+                                    Yang, Jiang Wu, Yifang Wang,
+                                    <strong>Jiayi Zhou</strong>, Xiwen
+                                    Cai,
+                                    Lingyun Yu, Yingcai Wu*
+                                </div>
+                                <!-- <div class="periodical">TVCG 2024.
                                     </div> -->
-                                        <div class="links proj-tag">
-                                            <a
-                                                href="https://ieeexplore.ieee.org/document/10415212"
-                                                target="_blank" title="doi">
-                                                <i class="fas fa-link"></i> doi
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="links proj-tag">
+                                    <a href="https://ieeexplore.ieee.org/document/10415212" target="_blank" title="doi">
+                                        <i class="fas fa-link"></i> doi
+                                    </a>
                                 </div>
-                            </li>
+                            </div>
+                        </div>
+                    </li>
 
-                            <li class="publication-item">
-                                <div class="pub-row">
-                                    <div class="col-sm-3 abbr"
-                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                        <img src="./assets/img/rigel_540w.jpg"
-                                            class="teaser img-fluid z-depth-1">
-                                        <abbr class="badge">VIS 2022</abbr>
-                                    </div>
-                                    <div class="col-sm-9"
-                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                        <div class="title"><a
-                                                href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">Rigel:
-                                                Transforming Tabular Data by
-                                                Declarative Mapping</a></div>
-                                        <div class="author">Junxiu Tang, Tan
-                                            Tang,
-                                            <strong>Jiayi Zhou</strong>, Lingyun
-                                            Yu,
-                                            Yingcai Wu*</div>
-                                        <div class="links proj-tag">
-                                            <a
-                                                href="https://ieeexplore.ieee.org/document/9908529"
-                                                target="_blank" title="doi">
-                                                <i class="fas fa-link"></i> doi
-                                            </a>
-                                        </div>
-                                    </div>
+                    <li class="publication-item">
+                        <div class="pub-row">
+                            <div class="col-sm-3 abbr"
+                                style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                <img src="./assets/img/rigel_540w.jpg" class="teaser img-fluid z-depth-1">
+                                <abbr class="badge">VIS 2022</abbr>
+                            </div>
+                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                <div class="title"><a
+                                        href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">Rigel:
+                                        Transforming Tabular Data by
+                                        Declarative Mapping</a></div>
+                                <div class="author">Junxiu Tang, Tan
+                                    Tang,
+                                    <strong>Jiayi Zhou</strong>, Lingyun
+                                    Yu,
+                                    Yingcai Wu*
                                 </div>
-                            </li>
+                                <div class="links proj-tag">
+                                    <a href="https://ieeexplore.ieee.org/document/9908529" target="_blank" title="doi">
+                                        <i class="fas fa-link"></i> doi
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
-                            <li class="publication-item">
-                                <div class="pub-row">
-                                    <div class="col-sm-3 abbr"
-                                        style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                        <img src="./assets/img/shoes_540w.jpg"
-                                            class="teaser img-fluid z-depth-1">
-                                        <abbr class="badge">IMWUT 2022</abbr>
-                                    </div>
-                                    <div class="col-sm-9"
-                                        style="position: relative;padding-right: 15px;padding-left: 20px;">
-                                        <div class="title"><a
-                                                href="https://dl.acm.org/doi/pdf/10.1145/3534620">Shoes++:
-                                                A Smart Detachable Sole for
-                                                Social
-                                                Foot-to-foot
-                                                Interaction</a></div>
-                                        <div class="author">Zihan Yan,
-                                            <strong>Jiayi
-                                                Zhou</strong>, Yufei Wu,
-                                            Guanhong
-                                            Liu, Danli Luo, Zihong Zhou, Haipeng
-                                            Mi,
-                                            Lingyun Sun, Xiang 'Anthony' Chen,
-                                            Ye
-                                            Tao, Yang Zhang, Guanyun Wang*</div>
-                                        <!-- <div class="periodical">IMWUT 2022.
+                    <li class="publication-item">
+                        <div class="pub-row">
+                            <div class="col-sm-3 abbr"
+                                style="position: relative;padding-right: 15px;padding-left: 15px;">
+                                <img src="./assets/img/shoes_540w.jpg" class="teaser img-fluid z-depth-1">
+                                <abbr class="badge">IMWUT 2022</abbr>
+                            </div>
+                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                                <div class="title"><a href="https://dl.acm.org/doi/pdf/10.1145/3534620">Shoes++:
+                                        A Smart Detachable Sole for
+                                        Social
+                                        Foot-to-foot
+                                        Interaction</a></div>
+                                <div class="author">Zihan Yan,
+                                    <strong>Jiayi
+                                        Zhou</strong>, Yufei Wu,
+                                    Guanhong
+                                    Liu, Danli Luo, Zihong Zhou, Haipeng
+                                    Mi,
+                                    Lingyun Sun, Xiang 'Anthony' Chen,
+                                    Ye
+                                    Tao, Yang Zhang, Guanyun Wang*
+                                </div>
+                                <!-- <div class="periodical">IMWUT 2022.
                                     </div> -->
-                                        <div class="links proj-tag">
-                                            <a
-                                                href="https://dl.acm.org/doi/10.1145/3534620"
-                                                target="_blank" title="doi">
-                                                <i class="fas fa-link"></i> doi
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="links proj-tag">
+                                    <a href="https://dl.acm.org/doi/10.1145/3534620" target="_blank" title="doi">
+                                        <i class="fas fa-link"></i> doi
+                                    </a>
                                 </div>
-                            </li>
-                        </ol>
-                    </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
 
-                    <h2 class="section-head" id="blogs">Blog</h2>
-                    <p>Paper Submission Reflection: Behind the Scenes • <a
-                            href="blog-rowing.html">What I Talk about When I
-                            Talk
-                            about Rowing</a> • Jiayi's Bookshelf • <a
-                            href="blog-collecting-dots.html">Collecting the
-                            Dots</a></p>
+            <h2 class="section-head" id="blogs">Blog</h2>
+            <p>Paper Submission Reflection: Behind the Scenes • <a href="blog-rowing.html">What I Talk about When I
+                    Talk
+                    about Rowing</a> • Jiayi's Bookshelf • <a href="blog-collecting-dots.html">Collecting the
+                    Dots</a></p>
 
-                    <!-- <ul>
+            <!-- <ul>
                     <li><a href="#">Paper Submission Reflection: Behind the
                             Scenes</a></li>
                     <li><a href="blog-rowing.html">What I Talk about When I Talk about
@@ -683,45 +617,40 @@
                     <li><a href="blog-collecting-dots.html">Collecting the Dots</a></li>
                 </ul> -->
 
-                    <h2 class="section-head" id="services">Service</h2>
+            <h2 class="section-head" id="services">Service</h2>
 
-                    <h4 style="margin:0 10px 0;">Research Assistants</h4>
-                    <ul>
-                        <li>[Mar. 2022 - June. 2024] <a
-                                href="https://zjuidg.org/">Interactive Data
-                                Group</a>, Zhejiang University, advised by <a
-                                href="http://www.ycwu.org/">Prof. Yingcai Wu</a>
-                            and
-                            <a href="https://tantang.org/">Prof. Tan
-                                Tang</a></li>
-                        <li>[Oct. 2021 - Mar. 2022] <a
-                                href="https://design.zju.edu.cn/guanyunlab/">Guanyun
-                                Lab</a>, Zhejiang University, advised by <a
-                                href="https://www.guanyundesign.com/">Prof.
-                                Guanyun
-                                Wang</a></li>
-                    </ul>
+            <h4 style="margin:0 10px 0;">Research Assistants</h4>
+            <ul>
+                <li>[Mar. 2022 - June. 2024] <a href="https://zjuidg.org/">Interactive Data
+                        Group</a>, Zhejiang University, advised by <a href="http://www.ycwu.org/">Prof. Yingcai Wu</a>
+                    and
+                    <a href="https://tantang.org/">Prof. Tan
+                        Tang</a>
+                </li>
+                <li>[Oct. 2021 - Mar. 2022] <a href="https://design.zju.edu.cn/guanyunlab/">Guanyun
+                        Lab</a>, Zhejiang University, advised by <a href="https://www.guanyundesign.com/">Prof.
+                        Guanyun
+                        Wang</a></li>
+            </ul>
 
-                    <h4 style="margin:0 10px 0;">Conference Reviewers</h4>
-                    <ul>
-                        <li>[2024, 2025, 2026] <a
-                                href="https://dl.acm.org/conference/chi">The
-                                ACM Conference on Human Factors in Computing
-                                Systems (CHI)</a></li>
-                        <li>[2025] <a
-                                href="https://cvpr.thecvf.com/">The
-                                IEEE/CVF Conference on Computer Vision and
-                                Pattern Recognition (CVPR)</a></li>
-                    </ul>
+            <h4 style="margin:0 10px 0;">Conference Reviewers</h4>
+            <ul>
+                <li>[2024, 2025, 2026] <a href="https://dl.acm.org/conference/chi">The
+                        ACM Conference on Human Factors in Computing
+                        Systems (CHI)</a></li>
+                <li>[2025] <a href="https://cvpr.thecvf.com/">The
+                        IEEE/CVF Conference on Computer Vision and
+                        Pattern Recognition (CVPR)</a></li>
+            </ul>
 
-                    <br>
-                    <email>@2025 Jiayi Zhou.</email>
+            <br>
+            <email>@2026 Jiayi Zhou.</email>
 
-                </section>
-            </div>
+        </section>
+    </div>
 
-            <!-- Footer -->
-            <!--
+    <!-- Footer -->
+    <!--
         <footer
             style="background-color: #fffef9; width: 100%; text-align: center; padding: 20px 0; margin-top: 2em">
             <div id="clustrmaps-container">
@@ -730,10 +659,10 @@
             </div>
         </footer>
         -->
-            <script src="./assets/js/scale.fix.js"></script>
+    <script src="./assets/js/scale.fix.js"></script>
 
-            <!-- Theme toggle functionality -->
-            <script>
+    <!-- Theme toggle functionality -->
+    <script>
         // Theme manager
         class ThemeManager {
             constructor() {
@@ -741,41 +670,33 @@
                 this.mainStylesheet = document.getElementById('main-stylesheet');
                 this.mainPublicationsStylesheet = document.getElementById('main-publications-stylesheet');
                 this.body = document.body;
-                
+
                 // Preloaded stylesheets
                 this.darkCSS = null;
                 this.lightCSS = null;
                 this.darkPublicationsCSS = null;
                 this.lightPublicationsCSS = null;
-                
-                // Always use system preference, don't remember user choice
-                this.currentTheme = this.getSystemTheme();
+
+                // Default to light mode (do not follow system preference)
+                this.currentTheme = 'light';
                 this.isManualOverride = false;
-                
+
                 this.init();
             }
-            
+
             async init() {
                 // Preload CSS files
                 await this.preloadCSS();
-                
+
                 // Apply current theme
                 this.applyTheme(this.currentTheme);
-                
+
                 // Page loaded, show content
                 this.body.classList.add('loaded');
-                
+
                 // Add click event listener
                 this.themeToggle.addEventListener('click', () => this.toggleTheme());
-                
-                // Listen for system theme changes
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                    if (!this.isManualOverride) {
-                        this.currentTheme = e.matches ? 'dark' : 'light';
-                        this.applyTheme(this.currentTheme);
-                    }
-                });
-                
+
                 // Keyboard shortcut support (Ctrl + D)
                 document.addEventListener('keydown', (e) => {
                     if (e.ctrlKey && e.key === 'd') {
@@ -784,35 +705,35 @@
                     }
                 });
             }
-            
+
             async preloadCSS() {
                 // Create preloaded stylesheet elements
                 this.darkCSS = document.createElement('link');
                 this.darkCSS.rel = 'stylesheet';
                 this.darkCSS.href = './assets/css/style.css';
                 this.darkCSS.media = 'print'; // Set to print first, won't apply styles
-                
+
                 this.lightCSS = document.createElement('link');
                 this.lightCSS.rel = 'stylesheet';
                 this.lightCSS.href = './assets/css/style-no-dark-mode.css';
                 this.lightCSS.media = 'print'; // Set to print first, won't apply styles
-                
+
                 this.darkPublicationsCSS = document.createElement('link');
                 this.darkPublicationsCSS.rel = 'stylesheet';
                 this.darkPublicationsCSS.href = './assets/css/publications.css';
                 this.darkPublicationsCSS.media = 'print'; // Set to print first, won't apply styles
-                
+
                 this.lightPublicationsCSS = document.createElement('link');
                 this.lightPublicationsCSS.rel = 'stylesheet';
                 this.lightPublicationsCSS.href = './assets/css/publications-no-dark-mode.css';
                 this.lightPublicationsCSS.media = 'print'; // Set to print first, won't apply styles
-                
+
                 // Add to head and wait for loading to complete
                 document.head.appendChild(this.darkCSS);
                 document.head.appendChild(this.lightCSS);
                 document.head.appendChild(this.darkPublicationsCSS);
                 document.head.appendChild(this.lightPublicationsCSS);
-                
+
                 return Promise.all([
                     new Promise(resolve => {
                         this.darkCSS.onload = resolve;
@@ -832,15 +753,15 @@
                     })
                 ]);
             }
-            
+
             getSystemTheme() {
                 return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             }
-            
+
             applyTheme(theme) {
                 // Add switching state
                 this.body.classList.add('theme-switching');
-                
+
                 // Use preloaded CSS for seamless switching
                 if (theme === 'dark') {
                     this.lightCSS.media = 'print';
@@ -855,17 +776,17 @@
                     this.lightPublicationsCSS.media = 'all';
                     this.body.setAttribute('data-theme', 'light');
                 }
-                
+
                 this.updateTooltip(theme);
                 this.updateFavicon(theme);
                 this.updateAriaLabel(theme);
-                
+
                 // Remove switching state
                 setTimeout(() => {
                     this.body.classList.remove('theme-switching');
                 }, 100);
             }
-            
+
             updateTooltip(theme) {
                 if (theme === 'dark') {
                     this.themeToggle.setAttribute('title', 'Switch to light mode');
@@ -877,7 +798,7 @@
             updateAriaLabel(theme) {
                 this.themeToggle.setAttribute('aria-label', theme);
             }
-            
+
             updateFavicon(theme) {
                 const favicon = document.querySelector('link[rel="icon"]');
                 if (favicon) {
@@ -885,32 +806,32 @@
                     favicon.href = './assets/img/jiayi.svg';
                 }
             }
-            
+
             toggleTheme() {
                 this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
                 this.isManualOverride = true;
                 this.applyTheme(this.currentTheme);
-                
+
                 // Add switching animation effect
                 this.addSwitchAnimation();
             }
-            
+
             addSwitchAnimation() {
                 this.themeToggle.style.transform = 'rotate(360deg)';
-                
+
                 setTimeout(() => {
                     this.themeToggle.style.transform = '';
                 }, 300);
             }
         }
-        
+
         // Initialize theme manager after page loads
         document.addEventListener('DOMContentLoaded', () => {
             new ThemeManager();
             initPublicationFilter();
             initCatInteraction();
         });
-        
+
         // If DOMContentLoaded has already fired, initialize immediately
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => {
@@ -929,12 +850,12 @@
             const tagAll = document.getElementById('tag_all');
             const tagFeatured = document.getElementById('tag_featured');
             const publicationItems = document.querySelectorAll('.publication-item');
-            
+
             if (!tagAll || !tagFeatured) return;
-            
+
             // Set initial state - Featured is selected
             tagFeatured.classList.add('selected');
-            
+
             // Show only featured publications initially
             publicationItems.forEach(item => {
                 if (!item.classList.contains('featured')) {
@@ -943,24 +864,24 @@
                     item.classList.remove('hidden');
                 }
             });
-            
+
             // Add click event listeners
-            tagAll.addEventListener('click', function() {
+            tagAll.addEventListener('click', function () {
                 // Update tag states
                 tagAll.classList.add('selected');
                 tagFeatured.classList.remove('selected');
-                
+
                 // Show all publications
                 publicationItems.forEach(item => {
                     item.classList.remove('hidden');
                 });
             });
-            
-            tagFeatured.addEventListener('click', function() {
+
+            tagFeatured.addEventListener('click', function () {
                 // Update tag states
                 tagFeatured.classList.add('selected');
                 tagAll.classList.remove('selected');
-                
+
                 // Show only featured publications
                 publicationItems.forEach(item => {
                     if (!item.classList.contains('featured')) {
@@ -971,12 +892,12 @@
                 });
             });
         }
-        
+
         // Announcement toggle functionality
         function toggleAnnouncements() {
             const olderAnnouncements = document.getElementById('older-announcements');
             const toggleButton = document.getElementById('toggle-announcements');
-            
+
             if (olderAnnouncements.style.display === 'none') {
                 olderAnnouncements.style.display = 'block';
                 toggleButton.classList.add('selected');
@@ -1027,6 +948,7 @@
             // Add scroll event listener
             window.addEventListener('scroll', handleScroll);
         }
-        </script>
-        </body>
-    </html>
+    </script>
+</body>
+
+</html>

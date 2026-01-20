@@ -32,7 +32,9 @@
             rel="stylesheet">
 
         <link rel="stylesheet" href="./assets/css/font.css">
-        <link rel="stylesheet" href="./assets/css/style.css"
+        <!-- <link rel="stylesheet" href="./assets/css/style.css" -->
+            <!-- id="main-stylesheet"> -->
+        <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css"
             id="main-stylesheet">
         <link rel="preload" href="./assets/css/style.css" as="style"
             id="dark-css">
@@ -216,7 +218,8 @@
                 this.lightCSS = null;
                 
                 // Always use system preference, don't remember user choice
-                this.currentTheme = this.getSystemTheme();
+                // this.currentTheme = this.getSystemTheme();
+                this.currentTheme = 'light';
                 this.isManualOverride = false;
                 
                 this.init();
@@ -235,13 +238,13 @@
                 // Add click event listener
                 this.themeToggle.addEventListener('click', () => this.toggleTheme());
                 
-                // Listen for system theme changes
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                    if (!this.isManualOverride) {
-                        this.currentTheme = e.matches ? 'dark' : 'light';
-                        this.applyTheme(this.currentTheme);
-                    }
-                });
+                // // Listen for system theme changes
+                // window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                //     if (!this.isManualOverride) {
+                //         this.currentTheme = e.matches ? 'dark' : 'light';
+                //         this.applyTheme(this.currentTheme);
+                //     }
+                // });
                 
                 // Keyboard shortcut support (Ctrl + D)
                 document.addEventListener('keydown', (e) => {
