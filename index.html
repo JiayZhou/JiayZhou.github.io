@@ -24,154 +24,147 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&amp;display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/font.css">
-    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css" id="main-stylesheet">
-    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css" id="main-publications-stylesheet">
-    <link rel="preload" href="./assets/css/style.css" as="style" id="dark-css">
-    <link rel="preload" href="./assets/css/style-no-dark-mode.css" as="style" id="light-css">
-    <link rel="preload" href="./assets/css/publications.css" as="style" id="dark-publications-css">
-    <link rel="preload" href="./assets/css/publications-no-dark-mode.css" as="style" id="light-publications-css">
+    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
+    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
 
     <style>
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: transparent;
-            border: none;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #134857;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border-radius: 50%;
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1);
-        }
-
-        body[data-theme="dark"] .theme-toggle {
-            color: #3eb7f0 !important;
-        }
-
-        .sun-and-moon> :is(.moon, .sun, .sun-beams) {
-            transform-origin: center;
-        }
-
-        .sun-and-moon> :is(.moon, .sun) {
-            fill: currentColor;
-        }
-
-        .theme-toggle:is(:hover, :focus-visible)>.sun-and-moon> :is(.moon, .sun) {
-            fill: currentColor;
-        }
-
-        .sun-and-moon>.sun-beams {
-            stroke: currentColor;
-            stroke-width: 2px;
-        }
-
-        .theme-toggle:is(:hover, :focus-visible) .sun-and-moon>.sun-beams {
-            stroke: currentColor;
-        }
-
-        [data-theme="dark"] .sun-and-moon>.sun {
-            transform: scale(1.75);
-        }
-
-        [data-theme="dark"] .sun-and-moon>.sun-beams {
-            opacity: 0;
-        }
-
-        [data-theme="dark"] .sun-and-moon>.moon>circle {
-            transform: translateX(-7px);
-        }
-
-        @supports (cx: 1) {
-            [data-theme="dark"] .sun-and-moon>.moon>circle {
-                cx: 17;
-                transform: translateX(0);
-            }
-        }
-
-        @media (prefers-reduced-motion: no-preference) {
-            .sun-and-moon>.sun {
-                transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            }
-
-            .sun-and-moon>.sun-beams {
-                transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity .5s ease;
-            }
-
-            .sun-and-moon .moon>circle {
-                transition: transform .25s ease-out;
-            }
-
-            @supports (cx: 1) {
-                .sun-and-moon .moon>circle {
-                    transition: cx .25s ease-out;
-                }
-            }
-
-            [data-theme="dark"] .sun-and-moon>.sun {
-                transition-timing-function: ease;
-                transition-duration: .25s;
-                transform: scale(1.75);
-            }
-
-            [data-theme="dark"] .sun-and-moon>.sun-beams {
-                transition-duration: .15s;
-                transform: rotateZ(-25deg);
-            }
-
-            [data-theme="dark"] .sun-and-moon>.moon>circle {
-                transition-duration: .5s;
-                transition-delay: .25s;
-            }
-        }
-
-        .theme-switching {
-            pointer-events: none;
-        }
-
-        @media (max-width: 960px) {
-            .theme-toggle {
-                top: 15px;
-                right: 15px;
-                width: 40px;
-                height: 40px;
-            }
-        }
-
         .section-nav {
-            text-align: center;
-            margin: 10px 0;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-left: 1px solid rgba(19, 72, 87, 0.22);
+            margin: 10px auto;
+            padding-left: 12px;
+            text-align: left;
         }
 
         .section-nav a {
             display: block;
+            position: relative;
             margin: 6px 0;
-            font-family: "Roboto Condensed";
-            font-size: 0.9rem;
-            font-weight: regular;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
+            font-size: 0.86rem;
+            font-weight: 400;
             text-decoration: none;
             color: inherit;
-            transition: opacity 0.6s ease;
-            text-transform: uppercase;
+            opacity: 0.72;
+            transition: color 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+            text-transform: none;
+        }
+
+        .section-nav a:hover,
+        .section-nav a.is-active {
+            color: var(--link-highlight);
+            opacity: 1;
+            transform: translateX(3px);
+        }
+
+        .section-nav a.is-active {
+            font-weight: 500;
+        }
+
+        .section-nav a.is-active::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -13px;
+            width: 2px;
+            height: 1.15em;
+            border-radius: 999px;
+            background: var(--link-highlight);
+            transform: translateY(-50%);
+        }
+
+        [data-theme="dark"] .section-nav {
+            border-left-color: rgba(97, 154, 195, 0.36);
         }
 
         @media (max-width: 768px) {
+            .section-nav {
+                padding-left: 10px;
+            }
+
             .section-nav a {
                 margin: 5px 0;
                 font-size: 0.8rem;
+            }
+
+            .section-nav a.is-active::before {
+                left: -11px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .section-nav {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                border-left: 0;
+                border-top: 1px solid rgba(19, 72, 87, 0.16);
+                margin: 8px auto 0;
+                padding: 8px 0 0;
+                max-width: 100%;
+                overflow-x: auto;
+                scrollbar-width: none;
+                text-align: center;
+            }
+
+            .section-nav::-webkit-scrollbar {
+                display: none;
+            }
+
+            .section-nav.is-stuck {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 900;
+                box-sizing: border-box;
+                width: 100%;
+                margin: 0;
+                padding: 9px 48px 10px 14px;
+                border-top: 0;
+                border-bottom: 1px solid rgba(19, 72, 87, 0.14);
+                background: rgba(255, 255, 255, 0.94);
+                box-shadow: 0 4px 14px rgba(19, 72, 87, 0.08);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+            }
+
+            .section-nav a {
+                flex: 0 0 auto;
+                margin: 0;
+                font-size: 0.75rem;
+            }
+
+            .section-nav a:hover,
+            .section-nav a.is-active {
+                transform: translateY(-1px);
+            }
+
+            .section-nav a.is-active::before {
+                top: auto;
+                bottom: -4px;
+                left: 50%;
+                width: 70%;
+                height: 2px;
+                transform: translateX(-50%);
+            }
+
+            [data-theme="dark"] .section-nav {
+                border-top-color: rgba(97, 154, 195, 0.28);
+            }
+
+            [data-theme="dark"] .section-nav.is-stuck {
+                border-bottom-color: rgba(97, 154, 195, 0.22);
+                background: rgba(32, 33, 43, 0.94);
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
             }
         }
 
@@ -225,7 +218,7 @@
 
 </head>
 
-<body>
+<body class="home-page">
     <button class="theme-toggle" id="themeToggle" title="mode switch" aria-label="auto" aria-live="polite">
         <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
             <mask class="moon" id="moon-mask">
@@ -249,60 +242,50 @@
     <div class="wrapper">
         <header>
 
-            <p id="avatar-message"
-                style="margin-bottom: -8px; font-size: 0.8rem; text-align: center; transition: all 0.3s ease;">
+            <p id="avatar-message">
                 Can you spot the cat on my page?
             </p>
 
             <a class="image avatar"><img src="./assets/img/speak_540w.jpg" alt="avatar" id="avatar-img" /></a>
 
-            <h1
-                style="font-family: 'Tangerine', cursive, serif; font-size: 2.15rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <h1 class="header-name">
                 Jiayi Zhou
-                <a href="http://www.next.zju.edu.cn/seal/#/" target="_blank" title="Seal from @Zhejiang University">
-                    <img src="./assets/img/jiayi.svg" alt="Jiayi Icon" style="width: 24px; height: 24px;">
+                <a href="http://www.next.zju.edu.cn/seal/#/" target="_blank" rel="noopener noreferrer" title="Seal from @Zhejiang University">
+                    <img src="./assets/img/jiayi.svg" alt="Jiayi Icon" class="seal-icon">
                 </a>
             </h1>
 
-            <email>UC101, HKUST, Clear Water Bay, HK.</email><br>
-            <email>jzhoudp/at/connect/dot/ust/dot/hk</email>
+            <div class="contact-lines">
+                <email>UC101, HKUST, Clear Water Bay,&nbsp;HK.</email>
+                <email>jzhoudp/at/connect/dot/ust/dot/hk</email>
+            </div>
 
             <br>
             <div class="social-icons">
-                <a style="margin: 0 5px 0 0"
-                    href="https://scholar.google.com/citations?user=3HqYcs4AAAAJ&hl=zh-CN&oi=sra">
-                    <i class="ai ai-google-scholar" style="font-size:1.2rem"></i>
+                <a href="https://scholar.google.com/citations?user=3HqYcs4AAAAJ&hl=zh-CN&oi=sra">
+                    <i class="ai ai-google-scholar"></i>
                 </a>
 
-                <a style="margin: 0 5px 0 0" href="assets/files/Jiayi_s_CV.pdf">
-                    <i class="ai ai-cv" style="font-size:1.3rem;"></i>
+                <a href="assets/files/Jiayi_s_CV.pdf">
+                    <i class="ai ai-cv"></i>
                 </a>
 
-                <!-- <a style="margin: 0 5px 0 0"
-                        href="https://github.com/JiayZhou">
-                        <i class="fab fa-github"></i>
-                    </a> -->
-
-                <a style="margin: 0 5px 0 0" href="https://www.instagram.com/jiayizhouzoe/">
+                <a href="https://www.instagram.com/jiayizhouzoe/">
                     <i class="fab fa-instagram"></i>
                 </a>
 
-                <a style="margin: 0 5px 0 0" href="https://www.linkedin.com/in/jiayi-zhou-698177283/">
+                <a href="https://www.linkedin.com/in/jiayi-zhou-698177283/">
                     <i class="fab fa-linkedin"></i>
-
-                    <!-- <a style="margin: 0 0 0 0"
-                        href="https://twitter.com/DouziZhou">
-                        <i class="fab fa-twitter"></i>
-                    </a> -->
+                </a>
             </div>
             <br>
 
             <nav class="section-nav">
-                <a href="#about-me">ABOUT</a>
-                <a href="#news">ANNOUNCEMENT</a>
-                <a href="#publications">PUBLICATION</a>
-                <a href="#blogs">BLOG</a>
-                <a href="#services">SERVICE</a>
+                <a href="#about-me">About</a>
+                <a href="#news">News</a>
+                <a href="#publications">Publications</a>
+                <a href="#blogs">Blog</a>
+                <a href="#services">Service</a>
             </nav>
             <br>
 
@@ -348,35 +331,35 @@
 
             <br>
 
-            <div style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px 1rem;">
-                <h2 class="section-head" id="news" style="margin: 0;">Announcement</h2>
+            <div class="section-toolbar">
+                <h2 class="section-head" id="news">News</h2>
                 <div class="publication-filter">
-                    <div class="tag" id="toggle-announcements" onclick="toggleAnnouncements()"
-                        style="cursor: pointer; margin-left: 8px;">Show
+                    <div class="tag" id="toggle-announcements">Show
                         More</div>
                 </div>
             </div>
             <ul>
-                <li>[April. 2026] Excited to present our work Collaposer at <a href="https://programs.sigchi.org/chi/2026/program/content/222281">CHI 2026 in Barcelon on 14 April</a>! Check out our <a href="https://jiayzhou.github.io/collaposer-website/">project website</a> for more details.</li>
-                </li>
+                <li>[May. 2026] Our paper <a href="https://shellywhen.github.io/projects/DataSway">DataSway</a>
+                    has received a Best Paper Award (1%) at <a href="https://dis.acm.org/2026/">ACM DIS 2026</a>
+                    in Singapore.</li>
+                <li>[April. 2026] Excited to present our work Collaposer at <a href="https://programs.sigchi.org/chi/2026/program/content/222281">CHI 2026 in Barcelona on 14 April</a>! Check out our <a href="https://jiayzhou.github.io/collaposer-website/">project website</a> for more details.</li>
                 <li>[Jan. 2026] Check my new post about
                     <a href="blog-rowing.html">a race before the submission deadline.</a>
                 </li>
                 <li>[Sep. 2025] Excited to attend <a href="https://uist.acm.org/2025/">UIST 2025</a>
                     in
                     Busan, South Korea in late September!</li>
-                <div id="older-announcements" style="display: none;">
-                    <li>[Sep. 2025] Check my new posts about a
+                <li class="older-announcement" hidden>[Sep. 2025] Check my new posts about a
                     <a href="blog-collecting-dots.html">New Zealand
                         adventure</a>
                     and
                     <a href="blog-rowing.html">reflections from
                         the rowing championship experience.</a>
                 </li>
-                    <li>[May. 2024] Attending the <a href="https://chi2024.acm.org/">CHI 2024</a>
+                <li class="older-announcement" hidden>[May. 2024] Attending the <a href="https://chi2024.acm.org/">CHI 2024</a>
                         in
                         Honolulu, Hawaiʻi!</li>
-                    <li>[May. 2024] Our <a href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">paper</a>
+                <li class="older-announcement" hidden>[May. 2024] Our <a href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">paper</a>
                         about human-AI co-creativity is going to be
                         presented at
                         <a href="https://chi2024.acm.org/">CHI 2024</a>.
@@ -384,35 +367,34 @@
                         all
                         co-authors :)
                     </li>
-                    <li>[Jan. 2024] Our <a href="https://ieeexplore.ieee.org/document/10415212">paper</a>
+                <li class="older-announcement" hidden>[Jan. 2024] Our <a href="https://ieeexplore.ieee.org/document/10415212">paper</a>
                         about Fixed-order event sequence visualization
                         has
                         been
                         accepted to <a href="https://www.computer.org/csdl/journal/tg">TVCG
                             2024</a>.</li>
-                    <li>[Jul. 2023] Attending the <a href="https://chinavis.org/2023/english/index_en.html">ChinaVis
+                <li class="older-announcement" hidden>[Jul. 2023] Attending the <a href="https://chinavis.org/2023/english/index_en.html">ChinaVis
                             2023 conference</a> in Chongqing,
                         China!</li>
-                    <li>[Aug. 2022] Our <a href="https://dl.acm.org/doi/pdf/10.1145/3534620">paper</a>
+                <li class="older-announcement" hidden>[Aug. 2022] Our <a href="https://dl.acm.org/doi/pdf/10.1145/3534620">paper</a>
                         about interactive techniques has been accepted
                         to <a href="https://ubicomp.org/ubicomp2022/">UbiComp
                             2022</a>.</li>
-                    <li>[Jul. 2022] Our <a
+                <li class="older-announcement" hidden>[Jul. 2022] Our <a
                             href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">paper</a>
                         about data transformation has been accepted to
                         <a href="https://ieeevis.org/year/2022/welcome">VIS
                             2022</a>.
                     </li>
-                </div>
             </ul>
             <br>
 
-            <div style="display: flex; align-items: center; justify-content: space-between; margin: 2px 0px -15px;">
-                <h2 class="section-head" id="publications" style="margin: 0;">Publication</h2>
+            <div class="section-toolbar section-toolbar--publications">
+                <h2 class="section-head" id="publications">Publications</h2>
                 <div class="publication-filter publication-filter--with-note">
                     <span class="publication-note">Corresponding author(s)*</span>
                     <div class="tag" id="tag_all">All</div>
-                    <div class="tag" id="tag_featured" style="margin-left: 8px;">Featured</div>
+                    <div class="tag" id="tag_featured">Featured</div>
                 </div>
             </div>
 
@@ -421,12 +403,46 @@
 
                     <li class="publication-item featured">
                         <div class="pub-row">
-                            <div class="col-sm-3 abbr"
-                                style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                <img src="./assets/img/collaposer_540w.jpg" class="teaser img-fluid z-depth-1">
-                                <abbr class="badge">CHI 2026</abbr>
+                            <div class="col-sm-3 abbr">
+                                <img src="./assets/img/datasway.png"
+                                    alt="DataSway authoring interface"
+                                    class="teaser img-fluid z-depth-1">
                             </div>
-                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                            <div class="col-sm-9">
+                                <div class="title"><a href="https://shellywhen.github.io/projects/DataSway">DataSway:
+                                        Vivifying Metaphoric Visualization with Animation Clip Generation and
+                                        Coordination</a></div>
+                                <div class="author">Liwenhan Xie, <strong>Jiayi Zhou</strong>, Anyi Rao, Huamin Qu,
+                                    Xinhuan Shu*
+                                </div>
+                                <div class="links proj-tag">
+                                    <span class="publication-venue">DIS 2026</span>
+                                    <a href="https://doi.org/10.1145/3800645.3813048" target="_blank" rel="noopener noreferrer" title="doi">
+                                        <i class="fas fa-link"></i> doi
+                                    </a>
+                                    <a href="https://arxiv.org/abs/2507.22051" target="_blank" rel="noopener noreferrer" title="arxiv">
+                                        <i class="far fa-file"></i>
+                                        arxiv
+                                    </a>
+                                    <a href="https://shellywhen.github.io/projects/DataSway" target="_blank" rel="noopener noreferrer"
+                                        title="website">
+                                        <i class="fas fa-home"></i>
+                                        website
+                                    </a>
+                                    <span class="publication-award">Best Paper Award (top 1%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="publication-item featured">
+                        <div class="pub-row">
+                            <div class="col-sm-3 abbr">
+                                <img src="./assets/img/collaposer_540w.jpg"
+                                    alt="Collaposer collage storytelling teaser"
+                                    class="teaser img-fluid z-depth-1">
+                            </div>
+                            <div class="col-sm-9">
                                 <div class="title"><a href="https://jiayzhou.github.io/collaposer-website/">Collaposer: Transforming Photo Collections into Visual Assets for Storytelling with Collages</a></div>
                                 <div class="author"><strong>Jiayi Zhou</strong>, Liwenhan Xie, Jiaju Ma, Zheng Wei,
                                     Huamin Qu, Anyi Rao*
@@ -434,16 +450,17 @@
                                 <div class="periodical">
                                 </div>
                                 <div class="links proj-tag">
-                                    <a href="https://doi.org/10.1145/3772318.3791160" target="_blank"
+                                    <span class="publication-venue">CHI 2026</span>
+                                    <a href="https://doi.org/10.1145/3772318.3791160" target="_blank" rel="noopener noreferrer"
                                         title="doi">
                                         <i class="fas fa-link"></i> doi
                                     </a>
-                                    <a href="https://jiayzhou.github.io/collaposer-website/" target="_blank"
+                                    <a href="https://jiayzhou.github.io/collaposer-website/" target="_blank" rel="noopener noreferrer"
                                         title="website">
                                         <i class="fas fa-home"></i>
                                         website
                                     </a>
-                                    <a href="https://arxiv.org/pdf/2601.18428" target="_blank" title="arxiv">
+                                    <a href="https://arxiv.org/pdf/2601.18428" target="_blank" rel="noopener noreferrer" title="arxiv">
                                         <i class="far fa-file"></i>
                                         arxiv
                                     </a>
@@ -454,13 +471,12 @@
 
                     <li class="publication-item">
                         <div class="pub-row">
-                            <div class="col-sm-3 abbr"
-                                style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                <img src="./assets/img/sonnet_540w.jpg" class="teaser img-fluid z-depth-1">
-                                <abbr class="badge">SIGGRAPH Art
-                                    2024</abbr>
+                            <div class="col-sm-3 abbr">
+                                <img src="./assets/img/sonnet_540w.jpg"
+                                    alt="Loss of Sonnet 18 visual artwork teaser"
+                                    class="teaser img-fluid z-depth-1">
                             </div>
-                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                            <div class="col-sm-9">
                                 <div class="title"><a href="https://dl.acm.org/doi/pdf/10.1145/3641523.3669939">Loss
                                         of Sonnet 18</a></div>
                                 <div class="author">Junxiu Tang,
@@ -473,11 +489,12 @@
                                         Art Gallery.
                                     </div> -->
                                 <div class="links proj-tag">
-                                    <a href="https://dl.acm.org/doi/10.1145/3641523.3669939" target="_blank"
+                                    <span class="publication-venue">SIGGRAPH Art 2024</span>
+                                    <a href="https://dl.acm.org/doi/10.1145/3641523.3669939" target="_blank" rel="noopener noreferrer"
                                         title="doi">
                                         <i class="fas fa-link"></i> doi
                                     </a>
-                                    <a href="https://ahugh19.github.io/publication/pdf/siggraph24-loss.pdf" target="_blank" title="pdf">
+                                    <a href="https://ahugh19.github.io/publication/pdf/siggraph24-loss.pdf" target="_blank" rel="noopener noreferrer" title="pdf">
                                         <i class="fas fa-feather-alt"></i>pictorial
                                     </a>
                                 </div>
@@ -487,12 +504,12 @@
 
                     <li class="publication-item featured">
                         <div class="pub-row">
-                            <div class="col-sm-3 abbr"
-                                style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                <img src="./assets/img/optimuse_540w.jpg" class="teaser img-fluid z-depth-1">
-                                <abbr class="badge">CHI 2024</abbr>
+                            <div class="col-sm-3 abbr">
+                                <img src="./assets/img/optimuse_540w.jpg"
+                                    alt="Human-AI co-design workflow diagram"
+                                    class="teaser img-fluid z-depth-1">
                             </div>
-                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                            <div class="col-sm-9">
                                 <div class="title"><a
                                         href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">Understanding
                                         Nonlinear Collaboration between
@@ -508,11 +525,12 @@
                                 <!-- <div class="periodical">CHI 2024.
                                     </div> -->
                                 <div class="links proj-tag">
-                                    <a href="https://dl.acm.org/doi/10.1145/3613904.3642812" target="_blank"
+                                    <span class="publication-venue">CHI 2024</span>
+                                    <a href="https://dl.acm.org/doi/10.1145/3613904.3642812" target="_blank" rel="noopener noreferrer"
                                         title="doi">
                                         <i class="fas fa-link"></i> doi
                                     </a>
-                                    <a href="https://arxiv.org/abs/2401.07312" target="_blank" title="arxiv">
+                                    <a href="https://arxiv.org/abs/2401.07312" target="_blank" rel="noopener noreferrer" title="arxiv">
                                         <i class="far fa-file"></i>
                                         arxiv
                                     </a>
@@ -523,12 +541,12 @@
 
                     <li class="publication-item">
                         <div class="pub-row">
-                            <div class="col-sm-3 abbr"
-                                style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                <img src="./assets/img/stringline_540w.jpg" class="teaser img-fluid z-depth-1">
-                                <abbr class="badge">TVCG 2024</abbr>
+                            <div class="col-sm-3 abbr">
+                                <img src="./assets/img/stringline_540w.jpg"
+                                    alt="Comparison of Gantt and Stringline visualizations"
+                                    class="teaser img-fluid z-depth-1">
                             </div>
-                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                            <div class="col-sm-9">
                                 <div class="title"><a
                                         href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10415212">A
                                         Comparative Study on Fixed-order
@@ -544,7 +562,8 @@
                                 <!-- <div class="periodical">TVCG 2024.
                                     </div> -->
                                 <div class="links proj-tag">
-                                    <a href="https://ieeexplore.ieee.org/document/10415212" target="_blank" title="doi">
+                                    <span class="publication-venue">TVCG 2024</span>
+                                    <a href="https://ieeexplore.ieee.org/document/10415212" target="_blank" rel="noopener noreferrer" title="doi">
                                         <i class="fas fa-link"></i> doi
                                     </a>
                                 </div>
@@ -554,12 +573,12 @@
 
                     <li class="publication-item">
                         <div class="pub-row">
-                            <div class="col-sm-3 abbr"
-                                style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                <img src="./assets/img/rigel_540w.jpg" class="teaser img-fluid z-depth-1">
-                                <abbr class="badge">VIS 2022</abbr>
+                            <div class="col-sm-3 abbr">
+                                <img src="./assets/img/rigel_540w.jpg"
+                                    alt="Rigel tabular data transformation interface"
+                                    class="teaser img-fluid z-depth-1">
                             </div>
-                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                            <div class="col-sm-9">
                                 <div class="title"><a
                                         href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">Rigel:
                                         Transforming Tabular Data by
@@ -571,7 +590,8 @@
                                     Yingcai Wu*
                                 </div>
                                 <div class="links proj-tag">
-                                    <a href="https://ieeexplore.ieee.org/document/9908529" target="_blank" title="doi">
+                                    <span class="publication-venue">VIS 2022</span>
+                                    <a href="https://ieeexplore.ieee.org/document/9908529" target="_blank" rel="noopener noreferrer" title="doi">
                                         <i class="fas fa-link"></i> doi
                                     </a>
                                 </div>
@@ -581,12 +601,12 @@
 
                     <li class="publication-item">
                         <div class="pub-row">
-                            <div class="col-sm-3 abbr"
-                                style="position: relative;padding-right: 15px;padding-left: 15px;">
-                                <img src="./assets/img/shoes_540w.jpg" class="teaser img-fluid z-depth-1">
-                                <abbr class="badge">IMWUT 2022</abbr>
+                            <div class="col-sm-3 abbr">
+                                <img src="./assets/img/shoes_540w.jpg"
+                                    alt="Shoes++ detachable sole interaction teaser"
+                                    class="teaser img-fluid z-depth-1">
                             </div>
-                            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+                            <div class="col-sm-9">
                                 <div class="title"><a href="https://dl.acm.org/doi/pdf/10.1145/3534620">Shoes++:
                                         A Smart Detachable Sole for
                                         Social
@@ -605,7 +625,8 @@
                                 <!-- <div class="periodical">IMWUT 2022.
                                     </div> -->
                                 <div class="links proj-tag">
-                                    <a href="https://dl.acm.org/doi/10.1145/3534620" target="_blank" title="doi">
+                                    <span class="publication-venue">IMWUT 2022</span>
+                                    <a href="https://dl.acm.org/doi/10.1145/3534620" target="_blank" rel="noopener noreferrer" title="doi">
                                         <i class="fas fa-link"></i> doi
                                     </a>
                                 </div>
@@ -632,7 +653,7 @@
 
             <h2 class="section-head" id="services">Service</h2>
 
-            <h4 style="margin:0 10px 0;">Research Assistants</h4>
+            <h4 class="service-subhead">Research Assistants</h4>
             <ul>
                 <li>[Mar. 2022 - June. 2024] <a href="https://zjuidg.org/">Interactive Data
                         Group</a>, Zhejiang University, advised by <a href="http://www.ycwu.org/">Prof. Yingcai Wu</a>
@@ -646,7 +667,7 @@
                         Wang</a></li>
             </ul>
 
-            <h4 style="margin:0 10px 0;">Conference Reviewers</h4>
+            <h4 class="service-subhead">Conference Reviewers</h4>
             <ul>
                 <li>[2024, 2025, 2026] <a href="https://dl.acm.org/conference/chi">The
                         ACM Conference on Human Factors in Computing
@@ -656,209 +677,111 @@
                         Pattern Recognition (CVPR)</a></li>
             </ul>
 
-            <br>
-            <email>@2026 Jiayi Zhou.</email>
-
         </section>
     </div>
 
-    <!-- Footer -->
-    <!--
-        <footer
-            style="background-color: #fffef9; width: 100%; text-align: center; padding: 20px 0; margin-top: 2em">
-            <div id="clustrmaps-container">
-                <script type='text/javascript' id='clustrmaps'
-                    src='https://cdn.clustrmaps.com/map_v2.js?cl=d8e3e7&w=300&t=m&d=6s6ALrN9wadyBkIfgVHlqR521LjGJLHZdDOGeQDmeYM&co=20212b&cmn=3eb7f0&cmo=93d5dc&ct=fffef9'></script>
-            </div>
-        </footer>
-        -->
+    <footer class="site-footer">
+        <p>© 2026 Jiayi Zhou. Last updated May 2026.</p>
+    </footer>
     <script src="./assets/js/scale.fix.js"></script>
 
-    <!-- Theme toggle functionality -->
+    <script src="./assets/js/theme-manager.js"></script>
     <script>
-        // Theme manager
-        class ThemeManager {
-            constructor() {
-                this.themeToggle = document.getElementById('themeToggle');
-                this.mainStylesheet = document.getElementById('main-stylesheet');
-                this.mainPublicationsStylesheet = document.getElementById('main-publications-stylesheet');
-                this.body = document.body;
+        function initPageInteractions() {
+            initSectionNav();
+            initAnnouncementToggle();
+            initPublicationFilter();
+            initCatInteraction();
+        }
 
-                // Preloaded stylesheets
-                this.darkCSS = null;
-                this.lightCSS = null;
-                this.darkPublicationsCSS = null;
-                this.lightPublicationsCSS = null;
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initPageInteractions, { once: true });
+        } else {
+            initPageInteractions();
+        }
 
-                // Default to light mode (do not follow system preference)
-                this.currentTheme = 'light';
-                this.isManualOverride = false;
+        // Publication filter functionality
+        function initSectionNav() {
+            const nav = document.querySelector('.section-nav');
+            const navLinks = Array.from(document.querySelectorAll('.section-nav a[href^="#"]'));
+            const sections = navLinks
+                .map(link => document.getElementById(link.getAttribute('href').slice(1)))
+                .filter(Boolean);
+            const mobileNavQuery = window.matchMedia('(max-width: 640px)');
+            let navStartY = 0;
 
-                this.init();
-            }
+            if (!nav || !navLinks.length || !sections.length) return;
 
-            async init() {
-                // Preload CSS files
-                await this.preloadCSS();
-
-                // Apply current theme
-                this.applyTheme(this.currentTheme);
-
-                // Page loaded, show content
-                this.body.classList.add('loaded');
-
-                // Add click event listener
-                this.themeToggle.addEventListener('click', () => this.toggleTheme());
-
-                // Keyboard shortcut support (Ctrl + D)
-                document.addEventListener('keydown', (e) => {
-                    if (e.ctrlKey && e.key === 'd') {
-                        e.preventDefault();
-                        this.toggleTheme();
+            function setActiveSection(activeId) {
+                navLinks.forEach(link => {
+                    const isActive = link.getAttribute('href') === `#${activeId}`;
+                    link.classList.toggle('is-active', isActive);
+                    if (isActive) {
+                        link.setAttribute('aria-current', 'true');
+                    } else {
+                        link.removeAttribute('aria-current');
                     }
                 });
             }
 
-            async preloadCSS() {
-                // Create preloaded stylesheet elements
-                this.darkCSS = document.createElement('link');
-                this.darkCSS.rel = 'stylesheet';
-                this.darkCSS.href = './assets/css/style.css';
-                this.darkCSS.media = 'print'; // Set to print first, won't apply styles
+            function updateActiveSection() {
+                const activationLine = window.innerHeight * 0.35;
+                let activeId = sections[0].id;
 
-                this.lightCSS = document.createElement('link');
-                this.lightCSS.rel = 'stylesheet';
-                this.lightCSS.href = './assets/css/style-no-dark-mode.css';
-                this.lightCSS.media = 'print'; // Set to print first, won't apply styles
+                sections.forEach(section => {
+                    if (section.getBoundingClientRect().top <= activationLine) {
+                        activeId = section.id;
+                    }
+                });
 
-                this.darkPublicationsCSS = document.createElement('link');
-                this.darkPublicationsCSS.rel = 'stylesheet';
-                this.darkPublicationsCSS.href = './assets/css/publications.css';
-                this.darkPublicationsCSS.media = 'print'; // Set to print first, won't apply styles
-
-                this.lightPublicationsCSS = document.createElement('link');
-                this.lightPublicationsCSS.rel = 'stylesheet';
-                this.lightPublicationsCSS.href = './assets/css/publications-no-dark-mode.css';
-                this.lightPublicationsCSS.media = 'print'; // Set to print first, won't apply styles
-
-                // Add to head and wait for loading to complete
-                document.head.appendChild(this.darkCSS);
-                document.head.appendChild(this.lightCSS);
-                document.head.appendChild(this.darkPublicationsCSS);
-                document.head.appendChild(this.lightPublicationsCSS);
-
-                return Promise.all([
-                    new Promise(resolve => {
-                        this.darkCSS.onload = resolve;
-                        this.darkCSS.onerror = resolve;
-                    }),
-                    new Promise(resolve => {
-                        this.lightCSS.onload = resolve;
-                        this.lightCSS.onerror = resolve;
-                    }),
-                    new Promise(resolve => {
-                        this.darkPublicationsCSS.onload = resolve;
-                        this.darkPublicationsCSS.onerror = resolve;
-                    }),
-                    new Promise(resolve => {
-                        this.lightPublicationsCSS.onload = resolve;
-                        this.lightPublicationsCSS.onerror = resolve;
-                    })
-                ]);
-            }
-
-            getSystemTheme() {
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
-
-            applyTheme(theme) {
-                // Add switching state
-                this.body.classList.add('theme-switching');
-
-                // Use preloaded CSS for seamless switching
-                if (theme === 'dark') {
-                    this.lightCSS.media = 'print';
-                    this.darkCSS.media = 'all';
-                    this.lightPublicationsCSS.media = 'print';
-                    this.darkPublicationsCSS.media = 'all';
-                    this.body.setAttribute('data-theme', 'dark');
-                } else {
-                    this.darkCSS.media = 'print';
-                    this.lightCSS.media = 'all';
-                    this.darkPublicationsCSS.media = 'print';
-                    this.lightPublicationsCSS.media = 'all';
-                    this.body.setAttribute('data-theme', 'light');
+                if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
+                    activeId = sections[sections.length - 1].id;
                 }
 
-                this.updateTooltip(theme);
-                this.updateFavicon(theme);
-                this.updateAriaLabel(theme);
-
-                // Remove switching state
-                setTimeout(() => {
-                    this.body.classList.remove('theme-switching');
-                }, 100);
+                setActiveSection(activeId);
             }
 
-            updateTooltip(theme) {
-                if (theme === 'dark') {
-                    this.themeToggle.setAttribute('title', 'Switch to light mode');
-                } else {
-                    this.themeToggle.setAttribute('title', 'Switch to dark mode');
+            function measureMobileNav() {
+                nav.classList.remove('is-stuck');
+                document.body.classList.remove('mobile-nav-stuck');
+                navStartY = nav.getBoundingClientRect().top + window.scrollY;
+                document.documentElement.style.setProperty('--mobile-nav-height', `${nav.offsetHeight}px`);
+                updateMobileNav();
+            }
+
+            function updateMobileNav() {
+                if (!mobileNavQuery.matches) {
+                    nav.classList.remove('is-stuck');
+                    document.body.classList.remove('mobile-nav-stuck');
+                    return;
                 }
+
+                const shouldStick = window.scrollY > navStartY - 4;
+                nav.classList.toggle('is-stuck', shouldStick);
+                document.body.classList.toggle('mobile-nav-stuck', shouldStick);
             }
 
-            updateAriaLabel(theme) {
-                this.themeToggle.setAttribute('aria-label', theme);
+            let ticking = false;
+            function requestUpdate() {
+                if (ticking) return;
+                ticking = true;
+                window.requestAnimationFrame(() => {
+                    updateActiveSection();
+                    updateMobileNav();
+                    ticking = false;
+                });
             }
 
-            updateFavicon(theme) {
-                const favicon = document.querySelector('link[rel="icon"]');
-                if (favicon) {
-                    // Use the same jiayi.svg for both themes
-                    favicon.href = './assets/img/jiayi.svg';
-                }
-            }
-
-            toggleTheme() {
-                this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
-                this.isManualOverride = true;
-                this.applyTheme(this.currentTheme);
-
-                // Add switching animation effect
-                this.addSwitchAnimation();
-            }
-
-            addSwitchAnimation() {
-                this.themeToggle.style.transform = 'rotate(360deg)';
-
-                setTimeout(() => {
-                    this.themeToggle.style.transform = '';
-                }, 300);
-            }
-        }
-
-        // Initialize theme manager after page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            new ThemeManager();
-            initPublicationFilter();
-            initCatInteraction();
-        });
-
-        // If DOMContentLoaded has already fired, initialize immediately
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                new ThemeManager();
-                initPublicationFilter();
-                initCatInteraction();
+            updateActiveSection();
+            measureMobileNav();
+            window.addEventListener('scroll', requestUpdate, { passive: true });
+            window.addEventListener('resize', () => {
+                measureMobileNav();
+                requestUpdate();
             });
-        } else {
-            new ThemeManager();
-            initPublicationFilter();
-            initCatInteraction();
+            window.addEventListener('load', measureMobileNav, { once: true });
         }
 
-        // Publication filter functionality
         function initPublicationFilter() {
             const tagAll = document.getElementById('tag_all');
             const tagFeatured = document.getElementById('tag_featured');
@@ -906,16 +829,29 @@
             });
         }
 
-        // Announcement toggle functionality
-        function toggleAnnouncements() {
-            const olderAnnouncements = document.getElementById('older-announcements');
+        function initAnnouncementToggle() {
             const toggleButton = document.getElementById('toggle-announcements');
 
-            if (olderAnnouncements.style.display === 'none') {
-                olderAnnouncements.style.display = 'block';
+            if (!toggleButton) return;
+
+            toggleButton.addEventListener('click', toggleAnnouncements);
+        }
+
+        // Announcement toggle functionality
+        function toggleAnnouncements() {
+            const olderAnnouncements = document.querySelectorAll('.older-announcement');
+            const toggleButton = document.getElementById('toggle-announcements');
+
+            if (!olderAnnouncements.length || !toggleButton) return;
+
+            const shouldShow = olderAnnouncements[0].hidden;
+            olderAnnouncements.forEach(item => {
+                item.hidden = !shouldShow;
+            });
+
+            if (shouldShow) {
                 toggleButton.classList.add('selected');
             } else {
-                olderAnnouncements.style.display = 'none';
                 toggleButton.classList.remove('selected');
             }
         }
@@ -951,7 +887,7 @@
                     passedAnnouncement = true;
                     avatarImg.src = './assets/img/angry_540w.jpg';
                     avatarMessage.textContent = 'Oops, you missed the cat!';
-                    avatarMessage.style.color = '#B42C14'; // Use "missing the cat" color
+                    avatarMessage.style.color = 'var(--cat-missed-color)';
 
                     // Remove the scroll event listener after triggering
                     window.removeEventListener('scroll', handleScroll);
