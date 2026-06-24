@@ -1,2 +1,2 @@
 # Ignore all contents in the original assets folder
-assets/original/
+assets/original/.DS_Store
