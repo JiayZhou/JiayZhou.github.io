@@ -265,6 +265,12 @@ h1 { font-weight: 500; color: var(--link-highlight); margin: 0 0 20px; }
     display: none;
 }
 
+@media screen and (min-width: 961px) {
+    .main-news-slot {
+        display: none;
+    }
+}
+
 .sidebar-news-slot {
     width: var(--sidebar-rail-width);
     margin: 20px auto 0;
@@ -509,12 +515,17 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
   .wrapper > section { padding: 20px 0; margin: 0 0 20px; }
   .wrapper .pub-row { display: flex; align-items: center; }
   .wrapper .image.avatar img { border-radius: 16%; width: 117px; padding: 20px; }
-  .main-news-slot { margin: 1.75rem 0 2rem; }
+  .main-news-slot { margin: 1.1rem 0 1.6rem; }
   .news-panel { width: 100%; margin: 0; padding-top: 0; border-top: 0; }
   .news-heading { margin-bottom: 1rem; font-size: 1.25rem; font-weight: 500; }
   .news-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
   .news-list li { margin: 0; padding-left: 11px; border-left: 1px solid var(--divider-color); font-size: 0.88rem; }
   pre, code { word-wrap: normal; }
+}
+
+@media screen and (max-width: 768px) {
+  .section-head { scroll-margin-top: calc(var(--mobile-nav-height, 46px) + 14px); }
+  body.mobile-nav-stuck .wrapper > header { padding-bottom: var(--mobile-nav-height, 46px); }
 }
 
 @media print, screen and (max-width: 640px) {
@@ -528,16 +539,14 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
   .seal-icon { width: 18px; height: 18px; }
   .social-icons { margin-top: 0; }
   .section-head { font-size: 1.18rem; margin-top: 1.45em; }
-  .section-head { scroll-margin-top: calc(var(--mobile-nav-height, 46px) + 14px); }
   .section-toolbar { margin-top: 0; margin-bottom: 0.65rem; }
-  .main-news-slot { margin: 1.45rem 0 1.75rem; }
+  .main-news-slot { margin: 0.9rem 0 1.35rem; }
   .news-heading { margin-bottom: 0.8rem; font-size: 1.18rem; }
   .news-list { gap: 12px; }
   .news-list li { padding-left: 9px; font-size: 0.82rem; line-height: 1.42; }
   .wrapper > section > p,
   .wrapper > section > ul { font-size: 0.93rem; line-height: 1.56; }
   .site-footer { margin-top: 1.75rem; padding-top: 0.75rem; }
-  body.mobile-nav-stuck .wrapper > header { padding-bottom: var(--mobile-nav-height, 46px); }
 }
 
 @media print, screen and (max-width: 480px) {
@@ -641,9 +650,13 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
 .tag {
     display: inline-block;
     padding: .05rem .4rem;
+    border: 0;
     border-radius: .4rem;
+    font: inherit;
     font-size: 14px;
+    line-height: inherit;
     cursor: pointer;
+    touch-action: manipulation;
     transition: all 0.3s ease;
     user-select: none;
 }

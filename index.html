@@ -99,7 +99,7 @@
             }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
             .section-nav {
                 display: flex;
                 flex-direction: row;
@@ -292,6 +292,23 @@
             </nav>
 
         </header>
+
+        <div class="main-news-slot" data-news-slot="mobile">
+            <aside class="news-panel" id="news" aria-labelledby="news-heading">
+                <h2 class="news-heading" id="news-heading">News</h2>
+                <ul class="news-list">
+                    <li>
+                        <time datetime="2026-04">Apr. 2026</time>
+                        <span>Excited to present Collaposer at <a href="https://programs.sigchi.org/chi/2026/program/content/222281">CHI 2026</a> in Barcelona!</span>
+                    </li>
+                    <li>
+                        <time datetime="2025-09">Sep. 2025</time>
+                        <span>Heading to <a href="https://uist.acm.org/2025/">UIST 2025</a> in Busan!</span>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
         <section>
 
             <h2 class="section-head" id="about-me">About</h2>
@@ -321,28 +338,12 @@
                 <a href="blog-rowing.html">What I Talk about When I Talk about Rowing</a> •
                 Jiayi's Bookshelf • <a href="blog-collecting-dots.html">Collecting the Dots</a>.</p>
 
-            <div class="main-news-slot" data-news-slot="mobile">
-                <aside class="news-panel" id="news" aria-labelledby="news-heading">
-                    <h2 class="news-heading" id="news-heading">News</h2>
-                    <ul class="news-list">
-                        <li>
-                            <time datetime="2026-04">Apr. 2026</time>
-                            <span>Excited to present Collaposer at <a href="https://programs.sigchi.org/chi/2026/program/content/222281">CHI 2026</a> in Barcelona!</span>
-                        </li>
-                        <li>
-                            <time datetime="2025-09">Sep. 2025</time>
-                            <span>Heading to <a href="https://uist.acm.org/2025/">UIST 2025</a> in Busan!</span>
-                        </li>
-                    </ul>
-                </aside>
-            </div>
-
             <div class="section-toolbar section-toolbar--publications">
                 <h2 class="section-head" id="publications">Publications</h2>
                 <div class="publication-filter publication-filter--with-note">
                     <span class="publication-note">Corresponding author(s)*</span>
-                    <div class="tag" id="tag_all">All</div>
-                    <div class="tag" id="tag_featured">Featured</div>
+                    <button class="tag" id="tag_all" type="button" aria-pressed="false">All</button>
+                    <button class="tag" id="tag_featured" type="button" aria-pressed="true">Featured</button>
                 </div>
             </div>
 
@@ -670,7 +671,7 @@
 
     <footer class="site-footer">
         <div class="footer-visitor-map">
-            <script type="text/javascript" id="mapmyvisitors"
+            <script type="text/javascript" id="mapmyvisitors" async
                 src="https://mapmyvisitors.com/map.js?cl=dadbdf&amp;w=70&amp;t=n&amp;d=kAZft4qbY99QpglezJfVEvJac1MikuIDYcXLpadtMzc&amp;co=ffffff&amp;cmo=8fb2c9&amp;cmn=619ac3&amp;ct=595959"></script>
         </div>
         <p><span class="footer-location">UC101, HKUST, Clear Water Bay, HK.</span>
@@ -682,9 +683,9 @@
     <script src="./assets/js/theme-manager.js"></script>
     <script>
         function initPageInteractions() {
+            initPublicationFilter();
             initResponsiveNews();
             initSectionNav();
-            initPublicationFilter();
             initCatInteraction();
         }
 
@@ -710,7 +711,11 @@
             }
 
             placeNews();
-            desktopQuery.addEventListener('change', placeNews);
+            if (desktopQuery.addEventListener) {
+                desktopQuery.addEventListener('change', placeNews);
+            } else {
+                desktopQuery.addListener(placeNews);
+            }
         }
 
         // Publication filter functionality
@@ -720,7 +725,7 @@
             const sections = navLinks
                 .map(link => document.getElementById(link.getAttribute('href').slice(1)))
                 .filter(Boolean);
-            const mobileNavQuery = window.matchMedia('(max-width: 640px)');
+            const mobileNavQuery = window.matchMedia('(max-width: 768px)');
             let navStartY = 0;
 
             if (!nav || !navLinks.length || !sections.length) return;
@@ -804,6 +809,8 @@
 
             // Set initial state - Featured is selected
             tagFeatured.classList.add('selected');
+            tagFeatured.setAttribute('aria-pressed', 'true');
+            tagAll.setAttribute('aria-pressed', 'false');
 
             // Show only featured publications initially
             publicationItems.forEach(item => {
@@ -819,6 +826,8 @@
                 // Update tag states
                 tagAll.classList.add('selected');
                 tagFeatured.classList.remove('selected');
+                tagAll.setAttribute('aria-pressed', 'true');
+                tagFeatured.setAttribute('aria-pressed', 'false');
 
                 // Show all publications
                 publicationItems.forEach(item => {
@@ -830,6 +839,8 @@
                 // Update tag states
                 tagFeatured.classList.add('selected');
                 tagAll.classList.remove('selected');
+                tagFeatured.setAttribute('aria-pressed', 'true');
+                tagAll.setAttribute('aria-pressed', 'false');
 
                 // Show only featured publications
                 publicationItems.forEach(item => {
