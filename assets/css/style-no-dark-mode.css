@@ -455,14 +455,7 @@ a small { font-size: 11px; color: #777; margin-top: -0.3em; display: block; }
 
 a:hover small { color: #777; }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: 232px minmax(0, 760px);
-    column-gap: 48px;
-    align-items: start;
-    width: 1040px;
-    margin: 0 auto;
-}
+.wrapper { width: 1040px; margin: 0 auto; }
 
 blockquote { border-left: 1px solid #e5e5e5; margin: 0; padding: 0 0 0 20px; font-style: italic; }
 
@@ -480,19 +473,11 @@ th { color: #444; }
 
 img { max-width: 100%; }
 
-header {
-    position: sticky;
-    top: 0;
-    align-self: start;
-    width: auto;
-    padding-top: 4.0em;
-    text-align: center;
-    -webkit-font-smoothing: subpixel-antialiased;
-}
+header { width: 232px; float: left; position: fixed; -webkit-font-smoothing: subpixel-antialiased; padding-top: 4.0em; text-align: center; }
 
 strong { color: #222; font-weight: 500; }
 
-section { min-width: 0; width: auto; padding-top: 4.0em; padding-bottom: 24px; }
+section { width: 760px; float: right; padding-top: 4.0em; padding-bottom: 24px; }
 
 small { font-size: 11px; }
 
@@ -502,7 +487,7 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
   body { word-wrap: break-word; }
   body.home-page { padding: 15px; }
   body.blog-page { padding: 0; }
-  div.wrapper { display: block; width: auto; margin: 0; }
+  div.wrapper { width: auto; margin: 0; }
   .wrapper > header,
   .wrapper > section { float: none; position: static; width: auto; }
   .wrapper > header { padding: 0; }
@@ -559,7 +544,12 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
     padding: 0 20px;
     box-sizing: border-box;
   }
-  
+
+  section {
+    width: calc(100% - 272px) !important;
+    max-width: 760px;
+    float: right;
+  }
 }
 
 .biblink { text-decoration: none; display: inline; margin-right: 0px; }
