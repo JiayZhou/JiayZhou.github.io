@@ -32,11 +32,13 @@
 
     <style>
         .section-nav {
-            display: inline-flex;
+            box-sizing: border-box;
+            display: flex;
             flex-direction: column;
             align-items: flex-start;
+            width: max-content;
             border-left: 1px solid rgba(19, 72, 87, 0.22);
-            margin: 10px auto;
+            margin: 18px auto 0;
             padding-left: 12px;
             text-align: left;
         }
@@ -107,6 +109,7 @@
                 gap: 10px;
                 border-left: 0;
                 border-top: 1px solid rgba(19, 72, 87, 0.16);
+                width: 100%;
                 margin: 8px auto 0;
                 padding: 8px 0 0;
                 max-width: 100%;
@@ -183,7 +186,7 @@
             transform: translateX(-50%) translateY(10px);
             width: 80px;
             height: 80px;
-            background-image: url('./assets/img/dou_compressed.jpg');
+            background-image: url('./assets/img/dou_240w.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -246,48 +249,47 @@
                 Can you spot the cat on my page?
             </p>
 
-            <a class="image avatar"><img src="./assets/img/speak_540w.jpg" alt="avatar" id="avatar-img" /></a>
+            <a class="image avatar"><img src="./assets/img/speak_400w.webp" alt="Jiayi Zhou" id="avatar-img"
+                    width="400" height="400" decoding="async" fetchpriority="high" /></a>
 
             <h1 class="header-name">
                 Jiayi Zhou
-                <a href="http://www.next.zju.edu.cn/seal/#/" target="_blank" rel="noopener noreferrer" title="Seal from @Zhejiang University">
-                    <img src="./assets/img/jiayi.svg" alt="Jiayi Icon" class="seal-icon">
+                <a href="http://www.next.zju.edu.cn/seal/#/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Jiayi Zhou's seal" title="Seal from Zhejiang University">
+                    <img src="./assets/img/jiayi.svg" alt="" class="seal-icon" width="20" height="20">
                 </a>
             </h1>
 
-            <div class="contact-lines">
-                <email>UC101, HKUST, Clear Water Bay,&nbsp;HK.</email>
-                <email>jzhoudp/at/connect/dot/ust/dot/hk</email>
-            </div>
-
-            <br>
             <div class="social-icons">
-                <a href="https://scholar.google.com/citations?user=3HqYcs4AAAAJ&hl=zh-CN&oi=sra">
-                    <i class="ai ai-google-scholar"></i>
+                <a href="mailto:jzhoudp@connect.ust.hk" aria-label="Email Jiayi Zhou" title="Email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                 </a>
 
-                <a href="assets/files/Jiayi_s_CV.pdf">
-                    <i class="ai ai-cv"></i>
+                <a href="https://scholar.google.com/citations?user=3HqYcs4AAAAJ&hl=zh-CN&oi=sra"
+                    aria-label="Google Scholar" title="Google Scholar">
+                    <i class="ai ai-google-scholar" aria-hidden="true"></i>
                 </a>
 
-                <a href="https://www.instagram.com/jiayizhouzoe/">
-                    <i class="fab fa-instagram"></i>
+                <a href="assets/files/Jiayi_s_CV.pdf" aria-label="Curriculum vitae" title="CV">
+                    <i class="ai ai-cv" aria-hidden="true"></i>
                 </a>
 
-                <a href="https://www.linkedin.com/in/jiayi-zhou-698177283/">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://www.instagram.com/jiayizhouzoe/" aria-label="Instagram" title="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/jiayi-zhou-698177283/" aria-label="LinkedIn" title="LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </a>
             </div>
-            <br>
+
+            <div class="sidebar-news-slot" data-news-slot="desktop"></div>
 
             <nav class="section-nav">
                 <a href="#about-me">About</a>
-                <a href="#news">News</a>
                 <a href="#publications">Publications</a>
-                <a href="#blogs">Blog</a>
                 <a href="#services">Service</a>
             </nav>
-            <br>
 
         </header>
         <section>
@@ -297,20 +299,8 @@
                     University
                     of Science and Technology</a>, advised by
                 <a href="http://huamin.org/">Prof. Huamin Qu</a> in the
-                <a href="http://vis.cse.ust.hk/">HKUST VisLab</a>, and
-                co-advised by <a href="https://anyirao.com/">Prof. Anyi
-                    Rao</a> in the <a href="https://mmlab-hkust.github.io/">Multimedia
-                    Creativity Lab</a>. Before that,
-                she received her Bachelor of Engineering (B.Eng) degree
-                in
-                industrial design, graduating with honors as an
-                Outstanding
-                Graduate from
-                <a href="https://www.zju.edu.cn/english/">Zhejiang
-                    University</a> in 2024.
-            </p>
-
-            <p>Her research interests lie at the intersection of
+                <a href="http://vis.cse.ust.hk/">HKUST VisLab</a>.
+                Her research interests lie at the intersection of
                 <strong>Data Visualization</strong> and
                 <strong>Human-Computer Interaction</strong>. She is
                 curious
@@ -327,70 +317,25 @@
                 body, and like-minded individuals. She aspires to be a
                 dedicated rower, an imaginative designer, and a
                 perceptive
-                photographer.</p>
+                photographer. Check out her blog posts: Behind the Submission •
+                <a href="blog-rowing.html">What I Talk about When I Talk about Rowing</a> •
+                Jiayi's Bookshelf • <a href="blog-collecting-dots.html">Collecting the Dots</a>.</p>
 
-            <br>
-
-            <div class="section-toolbar">
-                <h2 class="section-head" id="news">News</h2>
-                <div class="publication-filter">
-                    <div class="tag" id="toggle-announcements">Show
-                        More</div>
-                </div>
+            <div class="main-news-slot" data-news-slot="mobile">
+                <aside class="news-panel" id="news" aria-labelledby="news-heading">
+                    <h2 class="news-heading" id="news-heading">News</h2>
+                    <ul class="news-list">
+                        <li>
+                            <time datetime="2026-04">Apr. 2026</time>
+                            <span>Excited to present Collaposer at <a href="https://programs.sigchi.org/chi/2026/program/content/222281">CHI 2026</a> in Barcelona!</span>
+                        </li>
+                        <li>
+                            <time datetime="2025-09">Sep. 2025</time>
+                            <span>Heading to <a href="https://uist.acm.org/2025/">UIST 2025</a> in Busan!</span>
+                        </li>
+                    </ul>
+                </aside>
             </div>
-            <ul>
-                <li>[Aug. 2026] Our paper <a href="https://jiayzhou.github.io/collascope/">Collascope</a>
-                    has been accepted to <a href="https://uist.acm.org/2026/">ACM UIST 2026</a>!
-                    Read the <a href="https://arxiv.org/abs/2608.01267">preprint</a> and explore the project website for more details.</li>
-                <li>[May. 2026] Our paper <a href="https://shellywhen.github.io/projects/DataSway">DataSway</a>
-                    has received a Best Paper Award (1%) at <a href="https://dis.acm.org/2026/">ACM DIS 2026</a>
-                    in Singapore.</li>
-                <li>[April. 2026] Excited to present our work Collaposer at <a href="https://programs.sigchi.org/chi/2026/program/content/222281">CHI 2026 in Barcelona on 14 April</a>! Check out our <a href="https://jiayzhou.github.io/collaposer-website/">project website</a> for more details.</li>
-                <li>[Jan. 2026] Check my new post about
-                    <a href="blog-rowing.html">a race before the submission deadline.</a>
-                </li>
-                <li>[Sep. 2025] Excited to attend <a href="https://uist.acm.org/2025/">UIST 2025</a>
-                    in
-                    Busan, South Korea in late September!</li>
-                <li class="older-announcement" hidden>[Sep. 2025] Check my new posts about a
-                    <a href="blog-collecting-dots.html">New Zealand
-                        adventure</a>
-                    and
-                    <a href="blog-rowing.html">reflections from
-                        the rowing championship experience.</a>
-                </li>
-                <li class="older-announcement" hidden>[May. 2024] Attending the <a href="https://chi2024.acm.org/">CHI 2024</a>
-                        in
-                        Honolulu, Hawaiʻi!</li>
-                <li class="older-announcement" hidden>[May. 2024] Our <a href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642812">paper</a>
-                        about human-AI co-creativity is going to be
-                        presented at
-                        <a href="https://chi2024.acm.org/">CHI 2024</a>.
-                        Grateful for the excellent collaboration with
-                        all
-                        co-authors :)
-                    </li>
-                <li class="older-announcement" hidden>[Jan. 2024] Our <a href="https://ieeexplore.ieee.org/document/10415212">paper</a>
-                        about Fixed-order event sequence visualization
-                        has
-                        been
-                        accepted to <a href="https://www.computer.org/csdl/journal/tg">TVCG
-                            2024</a>.</li>
-                <li class="older-announcement" hidden>[Jul. 2023] Attending the <a href="https://chinavis.org/2023/english/index_en.html">ChinaVis
-                            2023 conference</a> in Chongqing,
-                        China!</li>
-                <li class="older-announcement" hidden>[Aug. 2022] Our <a href="https://dl.acm.org/doi/pdf/10.1145/3534620">paper</a>
-                        about interactive techniques has been accepted
-                        to <a href="https://ubicomp.org/ubicomp2022/">UbiComp
-                            2022</a>.</li>
-                <li class="older-announcement" hidden>[Jul. 2022] Our <a
-                            href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9908529">paper</a>
-                        about data transformation has been accepted to
-                        <a href="https://ieeevis.org/year/2022/welcome">VIS
-                            2022</a>.
-                    </li>
-            </ul>
-            <br>
 
             <div class="section-toolbar section-toolbar--publications">
                 <h2 class="section-head" id="publications">Publications</h2>
@@ -409,7 +354,8 @@
                             <div class="col-sm-3 abbr">
                                 <img src="./assets/img/collascope_540w.webp"
                                     alt="Collascope serendipitous asset exploration teaser"
-                                    class="teaser img-fluid z-depth-1">
+                                    class="teaser img-fluid z-depth-1" width="540" height="396"
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="col-sm-9">
                                 <div class="title"><a href="https://jiayzhou.github.io/collascope/">Collascope: Supporting Serendipitous Asset Exploration for Collage-Based Storytelling</a></div>
@@ -435,9 +381,10 @@
                     <li class="publication-item featured">
                         <div class="pub-row">
                             <div class="col-sm-3 abbr">
-                                <img src="./assets/img/datasway.png"
+                                <img src="./assets/img/datasway_512w.webp"
                                     alt="DataSway authoring interface"
-                                    class="teaser img-fluid z-depth-1">
+                                    class="teaser img-fluid z-depth-1" width="512" height="318"
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="col-sm-9">
                                 <div class="title"><a href="https://shellywhen.github.io/projects/DataSway">DataSway:
@@ -469,9 +416,10 @@
                     <li class="publication-item featured">
                         <div class="pub-row">
                             <div class="col-sm-3 abbr">
-                                <img src="./assets/img/collaposer_540w.jpg"
+                                <img src="./assets/img/collaposer_540w.webp"
                                     alt="Collaposer collage storytelling teaser"
-                                    class="teaser img-fluid z-depth-1">
+                                    class="teaser img-fluid z-depth-1" width="540" height="351"
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="col-sm-9">
                                 <div class="title"><a href="https://jiayzhou.github.io/collaposer-website/">Collaposer: Transforming Photo Collections into Visual Assets for Storytelling with Collages</a></div>
@@ -500,12 +448,13 @@
                         </div>
                     </li>
 
-                    <li class="publication-item featured">
+                    <li class="publication-item">
                         <div class="pub-row">
                             <div class="col-sm-3 abbr">
-                                <img src="./assets/img/screenwriter.png"
+                                <img src="./assets/img/screenwriter_540w.webp"
                                     alt="Human-AI co-creation study with screenwriters"
-                                    class="teaser img-fluid z-depth-1">
+                                    class="teaser img-fluid z-depth-1" width="540" height="193"
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="col-sm-9">
                                 <div class="title"><a href="https://dl.acm.org/doi/10.1145/3772318.3790300">How Do Human Creators Embrace Human-AI Co-Creation? A Perspective on Human Agency of Screenwriters</a></div>
@@ -526,9 +475,10 @@
                     <li class="publication-item">
                         <div class="pub-row">
                             <div class="col-sm-3 abbr">
-                                <img src="./assets/img/sonnet_540w.jpg"
+                                <img src="./assets/img/sonnet_540w.webp"
                                     alt="Loss of Sonnet 18 visual artwork teaser"
-                                    class="teaser img-fluid z-depth-1">
+                                    class="teaser img-fluid z-depth-1" width="540" height="360"
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="col-sm-9">
                                 <div class="title"><a href="https://dl.acm.org/doi/pdf/10.1145/3641523.3669939">Loss
@@ -559,9 +509,10 @@
                     <li class="publication-item featured">
                         <div class="pub-row">
                             <div class="col-sm-3 abbr">
-                                <img src="./assets/img/optimuse_540w.jpg"
+                                <img src="./assets/img/optimuse_540w.webp"
                                     alt="Human-AI co-design workflow diagram"
-                                    class="teaser img-fluid z-depth-1">
+                                    class="teaser img-fluid z-depth-1" width="540" height="240"
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="col-sm-9">
                                 <div class="title"><a
@@ -596,9 +547,10 @@
                     <li class="publication-item">
                         <div class="pub-row">
                             <div class="col-sm-3 abbr">
-                                <img src="./assets/img/stringline_540w.jpg"
+                                <img src="./assets/img/stringline_540w.webp"
                                     alt="Comparison of Gantt and Stringline visualizations"
-                                    class="teaser img-fluid z-depth-1">
+                                    class="teaser img-fluid z-depth-1" width="540" height="412"
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="col-sm-9">
                                 <div class="title"><a
@@ -628,9 +580,10 @@
                     <li class="publication-item">
                         <div class="pub-row">
                             <div class="col-sm-3 abbr">
-                                <img src="./assets/img/rigel_540w.jpg"
+                                <img src="./assets/img/rigel_540w.webp"
                                     alt="Rigel tabular data transformation interface"
-                                    class="teaser img-fluid z-depth-1">
+                                    class="teaser img-fluid z-depth-1" width="540" height="300"
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="col-sm-9">
                                 <div class="title"><a
@@ -656,9 +609,10 @@
                     <li class="publication-item">
                         <div class="pub-row">
                             <div class="col-sm-3 abbr">
-                                <img src="./assets/img/shoes_540w.jpg"
+                                <img src="./assets/img/shoes_540w.webp"
                                     alt="Shoes++ detachable sole interaction teaser"
-                                    class="teaser img-fluid z-depth-1">
+                                    class="teaser img-fluid z-depth-1" width="540" height="360"
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="col-sm-9">
                                 <div class="title"><a href="https://dl.acm.org/doi/pdf/10.1145/3534620">Shoes++:
@@ -690,60 +644,45 @@
                 </ol>
             </div>
 
-            <h2 class="section-head" id="blogs">Blog</h2>
-            <p>Paper Submission Reflection: Behind the Scenes • <a href="blog-rowing.html">What I Talk about When I
-                    Talk
-                    about Rowing</a> • Jiayi's Bookshelf • <a href="blog-collecting-dots.html">Collecting the
-                    Dots</a></p>
-
-            <!-- <ul>
-                    <li><a href="#">Paper Submission Reflection: Behind the
-                            Scenes</a></li>
-                    <li><a href="blog-rowing.html">What I Talk about When I Talk about
-                            Rowing</a></li>
-                    <li><a href="#">Jiayi's Bookshelf</a></li>
-                    <li><a href="blog-collecting-dots.html">Collecting the Dots</a></li>
-                </ul> -->
-
             <h2 class="section-head" id="services">Service</h2>
 
-            <h4 class="service-subhead">Research Assistants</h4>
-            <ul>
-                <li>[Mar. 2022 - June. 2024] <a href="https://zjuidg.org/">Interactive Data
-                        Group</a>, Zhejiang University, advised by <a href="http://www.ycwu.org/">Prof. Yingcai Wu</a>
-                    and
-                    <a href="https://tantang.org/">Prof. Tan
-                        Tang</a>
-                </li>
-                <li>[Oct. 2021 - Mar. 2022] <a href="https://design.zju.edu.cn/guanyunlab/">Guanyun
-                        Lab</a>, Zhejiang University, advised by <a href="https://www.guanyundesign.com/">Prof.
-                        Guanyun
-                        Wang</a></li>
-            </ul>
+            <dl class="service-list">
+                <dt>Reviewer</dt>
+                <dd><span class="service-category">HCI/VIS:</span>
+                    <span class="service-entry"><a href="https://dl.acm.org/conference/chi">CHI</a> [2024–2026]</span>,
+                    <span class="service-entry"><a href="https://uist.acm.org/2026/">UIST</a> [2026]</span>,
+                    <span class="service-entry"><a href="https://pacificvis2026.github.io/">PacificVis</a> [2026]</span>
+                    <span class="service-divider" aria-hidden="true">·</span>
+                    <span class="service-category">CV/CG:</span>
+                    <span class="service-entry"><a href="https://asia.siggraph.org/2026/">SIGGRAPH Asia</a> [2026]</span>,
+                    <span class="service-entry"><a href="https://cveu.github.io/event/cvpr2025.html">CVEU@CVPR</a> [2025]</span>
+                </dd>
 
-            <h4 class="service-subhead">Conference Reviewers</h4>
-            <ul>
-                <li>[2024, 2025, 2026] <a href="https://dl.acm.org/conference/chi">The
-                        ACM Conference on Human Factors in Computing
-                        Systems (CHI)</a></li>
-                <li>[2025] <a href="https://cvpr.thecvf.com/">The
-                        IEEE/CVF Conference on Computer Vision and
-                        Pattern Recognition (CVPR)</a></li>
-            </ul>
+                <dt>Teaching</dt>
+                <dd>HUMA 1160, Weiqi and Chinese Culture [2025 Fall, 2026 Spring]</dd>
+
+                <dt>Volunteer</dt>
+                <dd><span class="service-entry"><a href="https://dl.acm.org/conference/chi">CHI</a> [2026]</span></dd>
+            </dl>
 
         </section>
     </div>
 
     <footer class="site-footer">
-        <p>© 2026 Jiayi Zhou. Last updated May 2026.</p>
+        <div class="footer-visitor-map">
+            <script type="text/javascript" id="mapmyvisitors"
+                src="https://mapmyvisitors.com/map.js?cl=dadbdf&amp;w=70&amp;t=n&amp;d=kAZft4qbY99QpglezJfVEvJac1MikuIDYcXLpadtMzc&amp;co=ffffff&amp;cmo=8fb2c9&amp;cmn=619ac3&amp;ct=595959"></script>
+        </div>
+        <p><span class="footer-location">UC101, HKUST, Clear Water Bay, HK.</span>
+            <span class="footer-copyright">© 2026 Jiayi Zhou. Last updated August 2026.</span></p>
     </footer>
     <script src="./assets/js/scale.fix.js"></script>
 
     <script src="./assets/js/theme-manager.js"></script>
     <script>
         function initPageInteractions() {
+            initResponsiveNews();
             initSectionNav();
-            initAnnouncementToggle();
             initPublicationFilter();
             initCatInteraction();
         }
@@ -752,6 +691,25 @@
             document.addEventListener('DOMContentLoaded', initPageInteractions, { once: true });
         } else {
             initPageInteractions();
+        }
+
+        function initResponsiveNews() {
+            const newsPanel = document.getElementById('news');
+            const desktopSlot = document.querySelector('[data-news-slot="desktop"]');
+            const mobileSlot = document.querySelector('[data-news-slot="mobile"]');
+            const desktopQuery = window.matchMedia('(min-width: 961px)');
+
+            if (!newsPanel || !desktopSlot || !mobileSlot) return;
+
+            function placeNews() {
+                const targetSlot = desktopQuery.matches ? desktopSlot : mobileSlot;
+                if (newsPanel.parentElement !== targetSlot) {
+                    targetSlot.appendChild(newsPanel);
+                }
+            }
+
+            placeNews();
+            desktopQuery.addEventListener('change', placeNews);
         }
 
         // Publication filter functionality
@@ -883,33 +841,6 @@
             });
         }
 
-        function initAnnouncementToggle() {
-            const toggleButton = document.getElementById('toggle-announcements');
-
-            if (!toggleButton) return;
-
-            toggleButton.addEventListener('click', toggleAnnouncements);
-        }
-
-        // Announcement toggle functionality
-        function toggleAnnouncements() {
-            const olderAnnouncements = document.querySelectorAll('.older-announcement');
-            const toggleButton = document.getElementById('toggle-announcements');
-
-            if (!olderAnnouncements.length || !toggleButton) return;
-
-            const shouldShow = olderAnnouncements[0].hidden;
-            olderAnnouncements.forEach(item => {
-                item.hidden = !shouldShow;
-            });
-
-            if (shouldShow) {
-                toggleButton.classList.add('selected');
-            } else {
-                toggleButton.classList.remove('selected');
-            }
-        }
-
         // Cat interaction functionality
         function initCatInteraction() {
             let catFound = false;
@@ -926,7 +857,7 @@
                 if (!catFound) {
                     catFound = true;
                     passedAnnouncement = false; // Reset "miss the cat" state
-                    avatarImg.src = './assets/img/smile_540w.jpg';
+                    avatarImg.src = './assets/img/smile_400w.webp';
                     avatarMessage.textContent = 'Yay! You found the cat!';
                     avatarMessage.style.color = 'var(--link-highlight)'; // Use hover color
                 }
@@ -939,7 +870,7 @@
 
                 if (scrollPosition >= pageHeight && !catFound && !passedAnnouncement) {
                     passedAnnouncement = true;
-                    avatarImg.src = './assets/img/angry_540w.jpg';
+                    avatarImg.src = './assets/img/angry_400w.webp';
                     avatarMessage.textContent = 'Oops, you missed the cat!';
                     avatarMessage.style.color = 'var(--cat-missed-color)';
 
