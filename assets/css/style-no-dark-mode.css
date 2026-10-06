@@ -483,7 +483,7 @@ a:hover small { color: #777; }
 
 .wrapper {
     display: grid;
-    grid-template-columns: 232px minmax(0, 760px);
+    grid-template-columns: 232px minmax(560px, 760px);
     column-gap: 48px;
     align-items: start;
     width: 1040px;
@@ -519,6 +519,17 @@ header {
 strong { color: #222; font-weight: 500; }
 
 section { min-width: 0; width: auto; padding-top: 4.0em; padding-bottom: 24px; }
+
+@media screen and (min-width: 961px) {
+    .wrapper > header {
+        grid-column: 1;
+    }
+
+    .wrapper > section {
+        grid-column: 2;
+        min-width: 560px;
+    }
+}
 
 small { font-size: 11px; }
 
@@ -582,7 +593,7 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
 /* Responsive layout for screens between 961px and 1080px */
 @media screen and (max-width: 1080px) and (min-width: 961px) {
   .wrapper { 
-    grid-template-columns: 232px minmax(0, 1fr);
+        grid-template-columns: 232px minmax(560px, 1fr);
     column-gap: 40px;
     width: 95%; 
     max-width: 1040px;
