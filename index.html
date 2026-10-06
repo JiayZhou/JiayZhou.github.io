@@ -297,6 +297,13 @@
             <aside class="news-panel" id="news" aria-labelledby="news-heading">
                 <h2 class="news-heading" id="news-heading">News</h2>
                 <ul class="news-list">
+                    <li class="news-item--pinned">
+                        <span>I am currently exploring PhD opportunities starting in 2027.</span>
+                    </li>
+                    <li>
+                        <time datetime="2026-10">Oct. 2026</time>
+                        <span>Looking forward to presenting and demoing <a href="https://jiayzhou.github.io/collascope/">Collascope</a> at <a href="https://uist.acm.org/2026/">UIST 2026</a> in Detroit!</span>
+                    </li>
                     <li>
                         <time datetime="2026-04">Apr. 2026</time>
                         <span>Excited to present Collaposer at <a href="https://programs.sigchi.org/chi/2026/program/content/222281">CHI 2026</a> in Barcelona!</span>
@@ -312,7 +319,7 @@
         <section>
 
             <h2 class="section-head" id="about-me">About</h2>
-            <p>Jiayi Zhou is a Ph.D. Student at <a href="https://hkust.edu.hk/zh-hant">The Hong Kong
+            <p>Jiayi Zhou is an MPhil student at <a href="https://hkust.edu.hk/zh-hant">The Hong Kong
                     University
                     of Science and Technology</a>, advised by
                 <a href="http://huamin.org/">Prof. Huamin Qu</a> in the
@@ -327,7 +334,7 @@
                 investigates how advanced Artificial
                 Intelligence, including GenAI and computer vision
                 models,
-                can empower the visual storytelling process.
+                can empower the nonlinear visual storytelling process.
             </p>
             <p>In daily life, Jiayi seeks <strong>moments of
                     "connection"</strong> with nature, her <span class="cat-hover">beloved cat</span>, her
@@ -364,7 +371,7 @@
                                     Zeyu Wang, Maneesh Agrawala, Huamin Qu*, Anyi Rao
                                 </div>
                                 <div class="links proj-tag">
-                                    <span class="publication-venue">UIST 2026</span>
+                                    <span class="publication-venue">UIST 2026 · Full Paper &amp; Demo</span>
                                     <a href="https://arxiv.org/abs/2608.01267" target="_blank" rel="noopener noreferrer" title="arxiv">
                                         <i class="far fa-file"></i>
                                         arxiv
@@ -540,6 +547,10 @@
                                         <i class="far fa-file"></i>
                                         arxiv
                                     </a>
+                                    <a class="publication-award" href="https://www.semanticscholar.org/paper/feacb3129097876863b3e25f5d750454a58e73b7" target="_blank" rel="noopener noreferrer" title="Semantic Scholar citations" data-citation-link="optimuse">
+                                        <i class="fas fa-quote-right"></i>
+                                        <span data-citation-count="optimuse">Cited by 136</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -675,7 +686,7 @@
                 src="https://mapmyvisitors.com/map.js?cl=dadbdf&amp;w=70&amp;t=n&amp;d=kAZft4qbY99QpglezJfVEvJac1MikuIDYcXLpadtMzc&amp;co=ffffff&amp;cmo=8fb2c9&amp;cmn=619ac3&amp;ct=595959"></script>
         </div>
         <p><span class="footer-location">UC101, HKUST, Clear Water Bay, HK.</span>
-            <span class="footer-copyright">© 2026 Jiayi Zhou. Last updated August 2026.</span></p>
+            <span class="footer-copyright">© 2026 Jiayi Zhou. Last updated October 2026.</span></p>
     </footer>
 
     <script src="./assets/js/scale.fix.js"></script>
@@ -894,6 +905,29 @@
             // Add scroll event listener
             window.addEventListener('scroll', handleScroll);
         }
+
+        // Load citation counts maintained by the scheduled Semantic Scholar update.
+        async function loadCitationCounts() {
+            try {
+                const response = await fetch('./assets/data/citations.json');
+                if (!response.ok) return;
+
+                const { papers } = await response.json();
+                Object.entries(papers).forEach(([key, paper]) => {
+                    document.querySelectorAll(`[data-citation-count="${key}"]`).forEach((element) => {
+                        element.textContent = `Cited by ${paper.citationCount}`;
+                    });
+                    document.querySelectorAll(`[data-citation-link="${key}"]`).forEach((element) => {
+                        element.href = paper.url;
+                        element.title = `${paper.source} citations`;
+                    });
+                });
+            } catch (error) {
+                // Keep the last committed count when the data file cannot be loaded.
+            }
+        }
+
+        loadCitationCounts();
     </script>
 </body>
 

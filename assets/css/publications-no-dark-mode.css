@@ -100,6 +100,7 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
         max-height: none;
         margin: 0 auto;
     }
+
 }
 
 html[data-theme="dark"] .publications ol.bibliography li .title { color: #fffef9; }

@@ -316,6 +316,26 @@ h1 { font-weight: 500; color: var(--link-highlight); margin: 0 0 20px; }
     margin-bottom: 0;
 }
 
+.news-list .news-item--pinned {
+    position: relative;
+    padding: 7px 8px 7px 25px;
+    border-radius: 5px;
+    background: var(--soft-accent-bg);
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+.news-list .news-item--pinned::before {
+    content: "\f08d";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: var(--link-highlight);
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.68rem;
+    font-weight: 900;
+}
+
 .news-list time {
     display: block;
     margin-bottom: 2px;
@@ -624,7 +644,9 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
     margin-right: 8px;
 }
 
-.publication-award {
+.publication-award,
+.proj-tag a.publication-award,
+.proj-tag a.publication-award:hover {
     color: var(--publication-award-color);
     font-weight: 700;
 }

@@ -5,12 +5,14 @@
 :root {
     --mid-gray: #999;
     --link-highlight: #134857;
+    --publication-award-color: #b77900;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --mid-gray: #666;
         --link-highlight: #93d5dc;
+        --publication-award-color: #d9a441;
     }
 }
 
@@ -272,6 +274,13 @@ footer[style*="background-color"] email {
 
 .proj-tag i {
     margin-right: 3px;
+}
+
+.publication-award,
+.proj-tag a.publication-award,
+.proj-tag a.publication-award:hover {
+    color: var(--publication-award-color);
+    font-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {
